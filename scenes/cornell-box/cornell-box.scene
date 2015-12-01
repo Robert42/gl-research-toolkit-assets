@@ -1,0 +1,28 @@
+{
+  "name": "Cornell-Box",
+  "file": "cornell-box.dae",
+  "materials":
+  [
+    {
+      "name": "leftWall",
+      "type": "PLAIN_COLOR",
+      "diffuse": [0.631, 0.065, 0.050],
+      "roughness": 0.7,
+      "metallic": 0
+    },
+    {
+      "name": "rightWall",
+      "type": "PLAIN_COLOR",
+      "diffuse": [0.14, 0.45, 0.091],
+      "roughness": 0.7,
+      "metallic": 0
+    },
+    {
+      "name": "wall",
+      "type": "PLAIN_COLOR",
+      "diffuse": [0.723, 0.723, 0.723],
+      "roughness": 0.7,
+      "metallic": 0
+    }
+  ]
+}
