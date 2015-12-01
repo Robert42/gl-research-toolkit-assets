@@ -10,3 +10,10 @@ This mesh was created in blender by generating the Suzanne Mesh (which ist direc
 2. Shift+A
 3. Mesh
 4. MonkeyAA
+
+# scenes/cornell-box
+
+Models downloaded from Morgan McGuire's Computer Graphics Archive http://graphics.cs.williams.edu/data
+
+
+
