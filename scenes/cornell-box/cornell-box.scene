@@ -23,6 +23,14 @@
       "diffuse": [0.723, 0.723, 0.723],
       "roughness": 0.7,
       "metallic": 0
+    },
+    {
+      "name": "light",
+      "type": "PLAIN_COLOR",
+      "diffuse": [0, 0, 0],
+      "emission": [1, 1, 1],
+      "roughness": 0.7,
+      "metallic": 0
     }
   ]
 }
