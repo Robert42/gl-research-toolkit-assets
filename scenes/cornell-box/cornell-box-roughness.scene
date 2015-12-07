@@ -1,6 +1,11 @@
 {
   "name": "Cornell-Box-Roughness",
   "file": "cornell-box-roughness.dae",
+  "debug-camera": 
+  {
+    "locked": true,
+    "camera": "camera"
+  },
   "materials":
   [
     {

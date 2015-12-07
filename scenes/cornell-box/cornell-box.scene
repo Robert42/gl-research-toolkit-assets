@@ -1,6 +1,11 @@
 {
   "name": "Cornell-Box",
   "file": "cornell-box.dae",
+  "debug-camera": 
+  {
+    "locked": false,
+    "camera": "camera"
+  },
   "materials":
   [
     {
