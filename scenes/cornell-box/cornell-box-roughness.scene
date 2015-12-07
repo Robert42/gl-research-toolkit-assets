@@ -1,6 +1,6 @@
 {
-  "name": "Cornell-Box",
-  "file": "cornell-box.dae",
+  "name": "Cornell-Box-Roughness",
+  "file": "cornell-box-roughness.dae",
   "materials":
   [
     {
@@ -36,10 +36,15 @@
   "lights":
   [
     {
-      "name": "light-dummy",
+      "name": "light-rect",
       "type": "rect-area-light",
-      "width": 0.47,
-      "height": 0.38
+      "width": 0.3,
+      "height": 0.3
+    },
+    {
+      "name": "light-sphere",
+      "type": "sphere-area-light",
+      "radius": 0.1125
     }
   ]
 }
