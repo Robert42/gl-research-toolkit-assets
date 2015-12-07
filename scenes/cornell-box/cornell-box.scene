@@ -32,5 +32,15 @@
       "roughness": 0.7,
       "metallic": 0
     }
+  ],
+  "lights":
+  [
+    {
+      "name": "light-dummy",
+      "type": "rect-area-light",
+      "width": 0.47,
+      "height": 0.38,
+      "color": 0.38
+    }
   ]
 }
