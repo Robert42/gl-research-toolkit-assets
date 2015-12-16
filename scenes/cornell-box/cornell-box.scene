@@ -12,21 +12,21 @@
       "name": "leftWall",
       "type": "PLAIN_COLOR",
       "diffuse": [0.631, 0.065, 0.050],
-      "roughness": 0.7,
+      "smoothness": 0.3,
       "metallic": 0
     },
     {
       "name": "rightWall",
       "type": "PLAIN_COLOR",
       "diffuse": [0.14, 0.45, 0.091],
-      "roughness": 0.7,
+      "smoothness": 0.3,
       "metallic": 0
     },
     {
       "name": "wall",
       "type": "PLAIN_COLOR",
       "diffuse": [0.723, 0.723, 0.723],
-      "roughness": 0.7,
+      "smoothness": 0.3,
       "metallic": 0
     },
     {
@@ -34,7 +34,7 @@
       "type": "PLAIN_COLOR",
       "diffuse": [0, 0, 0],
       "emission": [1, 1, 1],
-      "roughness": 0.7,
+      "smoothness": 0.3,
       "metallic": 0
     }
   ],
