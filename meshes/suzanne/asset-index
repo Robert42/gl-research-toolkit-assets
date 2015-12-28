@@ -1,4 +1,12 @@
+#include "uuids.as"
+
 void main(ResourceIndex@ index)
 {
+  convertStaticMesh("suzanne.mesh", "suzanne.blend");
+  convertStaticMesh("suzanne-smooth.mesh", "suzanne-smooth.blend");
+
+  index.registerAsset(uuids::low_poly, "suzanne.mesh");
+  index.registerAsset(uuids::smooth, "suzanne-smooth.mesh");
+
   log_info("Suzanne - Check");
 }
