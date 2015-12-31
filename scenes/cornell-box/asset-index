@@ -1,4 +1,4 @@
 void main(ResourceIndex@ index)
 {
-  log_info("Cornell-Box - Check");
+  convertSceneGraph("cornell-box.scene-graph", "cornell-box.blend");
 }

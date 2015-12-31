@@ -7,6 +7,4 @@ void main(ResourceIndex@ index)
 
   index.registerAsset(uuids::low_poly, "suzanne.mesh");
   index.registerAsset(uuids::smooth, "suzanne-smooth.mesh");
-
-  log_info("Suzanne - Check");
 }
