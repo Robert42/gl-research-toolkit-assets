@@ -1,4 +1,4 @@
-void main(StaticMeshLoader@ loader, Uuid<StaticMeshData> &in uuid)
+void main(StaticMeshLoader@ loader, Uuid<StaticMesh> &in uuid)
 {
   array<uint16> indices = 
   {
