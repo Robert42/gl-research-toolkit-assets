@@ -11,5 +11,6 @@ void main(ResourceIndex@ index)
 
   convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
                     sourceFile: "cornell-box.blend",
+                    uuid: Uuid<ResourceGroup>("{336a9321-fb5f-4566-9c1c-4a88832bda48}"),
                     settings: sceneImportSettings);
 }
