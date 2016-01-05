@@ -11,5 +11,5 @@ void main(ResourceIndex@ index)
 
   convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
                     sourceFile: "cornell-box.blend",
-                    settings: @sceneImportSettings);
+                    settings: sceneImportSettings);
 }
