@@ -1,4 +1,12 @@
 void main(ResourceIndex@ index)
 {
-  convertSceneGraph("cornell-box.scene-graph", "cornell-box.blend");
+  array<string> meshesToImport = {".*"};
+  dictionary uuids;
+
+  convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
+                    sourceFile: "cornell-box.blend",
+                    meshesToImport: meshesToImport,
+                    meshUuids: uuids,
+                    materialUuids: uuids,
+                    lightUuids: uuids);
 }
