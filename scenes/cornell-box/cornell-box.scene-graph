@@ -10,6 +10,9 @@ void main(Scene@ scene)
   Uuid<Camera> cameraUuid;
   Uuid<Light> lightUuid;
   Uuid<StaticMesh> meshUuid;
+  Uuid<Material> materialUuid;
+  Uuid<Light> fallbackLight = "{893463c4-143a-406f-9ef7-3506817d5837}";
+  Uuid<Material> fallbackMaterial = "{a8f3fb1b-1168-433b-aaf8-e24632cce156}";
 
   loadMeshes(group);
 
@@ -19,44 +22,50 @@ void main(Scene@ scene)
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{c0878133-7777-53da-9684-5d4b92c9f3c1}");
+  materialUuid = fallbackMaterial;
   group.labels[meshUuid] = "walls";
   group.add(meshUuid);
-  StaticMeshComponent::create(node: node, uuid: meshUuid);
+  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
   meshUuid = Uuid<StaticMesh>("{fc063206-e3a7-5a96-b775-84448cc5d44b}");
+  materialUuid = fallbackMaterial;
   group.labels[meshUuid] = "walls";
   group.add(meshUuid);
-  StaticMeshComponent::create(node: node, uuid: meshUuid);
+  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
   meshUuid = Uuid<StaticMesh>("{b4023fdf-6f35-5238-94ec-13f7dac8deb9}");
+  materialUuid = fallbackMaterial;
   group.labels[meshUuid] = "walls";
   group.add(meshUuid);
-  StaticMeshComponent::create(node: node, uuid: meshUuid);
+  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
 
   nodeUuid = Uuid<Node>("{6cda7a6d-81ab-5b95-9bbc-10c2a8f3e1a7}");
   group.labels[nodeUuid] = "short-cube";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{57a474b5-08ef-5401-8bfe-be84907f1405}");
+  materialUuid = fallbackMaterial;
   group.labels[meshUuid] = "short-cube";
   group.add(meshUuid);
-  StaticMeshComponent::create(node: node, uuid: meshUuid);
+  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
 
   nodeUuid = Uuid<Node>("{2c7d2b7d-30c3-5aed-8085-3edd97283791}");
   group.labels[nodeUuid] = "long-cube";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{4c47780f-2191-5a96-9826-572695b3d6f2}");
+  materialUuid = fallbackMaterial;
   group.labels[meshUuid] = "long-cube";
   group.add(meshUuid);
-  StaticMeshComponent::create(node: node, uuid: meshUuid);
+  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
 
   nodeUuid = Uuid<Node>("{20979f4b-e4b1-5edb-8f34-a9912d43d4d4}");
   group.labels[nodeUuid] = "light-dummy";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{6ad3e55e-1dfa-5dfa-a315-204e6a395cdd}");
+  materialUuid = fallbackMaterial;
   group.labels[meshUuid] = "light-dummy";
   group.add(meshUuid);
-  StaticMeshComponent::create(node: node, uuid: meshUuid);
+  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
 
   nodeUuid = Uuid<Node>("{b98a61b5-95f4-5781-b17c-2ad89d593ef1}");
   group.labels[nodeUuid] = "camera";
@@ -71,7 +80,7 @@ void main(Scene@ scene)
   group.labels[nodeUuid] = "area-light";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  lightUuid = Uuid<Light>("{893463c4-143a-406f-9ef7-3506817d5837}");
+  lightUuid = fallbackLight;
   group.labels[lightUuid] = "area-light";
   group.add(lightUuid);
   LightComponent::create(node: node, uuid: lightUuid);
