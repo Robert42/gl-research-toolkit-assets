@@ -1,21 +1,22 @@
+#include "uuids.as"
+
 void main(ResourceIndex@ index)
 {
-  SceneGraphImportSettings sceneImportSettings;
-  array<string> meshesToImport = {".*"};
-  dictionary uuids;
+  SceneGraphImportSettings importSettings;
   
-  sceneImportSettings.meshesToImport = meshesToImport;
-  sceneImportSettings.meshUuids = uuids;
-  sceneImportSettings.materialUuids = uuids;
-  sceneImportSettings.lightUuids = uuids;
+  importSettings.materialUuids['mirror-roughness-0_0'] = mirrorRoughness_00;
+  importSettings.materialUuids['mirror-roughness-0_1'] = mirrorRoughness_10;
+  importSettings.materialUuids['mirror-roughness-0_2'] = mirrorRoughness_20;
+  importSettings.materialUuids['mirror-roughness-0_3'] = mirrorRoughness_30;
+  importSettings.materialUuids['mirror-roughness-0_4'] = mirrorRoughness_40;
 
   convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
                     sourceFile: "cornell-box.blend",
                     uuid: Uuid<ResourceGroup>("{336a9321-fb5f-4566-9c1c-4a88832bda48}"),
-                    settings: sceneImportSettings);
+                    settings: importSettings);
 
   convertSceneGraph(sceneGraphFile: "cornell-box-roughness.scene-graph",
                     sourceFile: "cornell-box-roughness.blend",
                     uuid: Uuid<ResourceGroup>("{273100e0-d20d-4d66-9fad-f893b9428b8d}"),
-                    settings: sceneImportSettings);
+                    settings: importSettings);
 }

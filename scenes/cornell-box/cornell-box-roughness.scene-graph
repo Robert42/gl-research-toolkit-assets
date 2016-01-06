@@ -1,4 +1,4 @@
-#include "./cornell-box-roughness.scene-graph.mesh"
+#include "cornell-box-roughness.scene-graph.mesh"
 
 void main(Scene@ scene)
 {

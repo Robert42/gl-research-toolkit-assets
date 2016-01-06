@@ -1,4 +1,4 @@
-#include "./cornell-box.scene-graph.mesh"
+#include "cornell-box.scene-graph.mesh"
 
 void main(Scene@ scene)
 {
