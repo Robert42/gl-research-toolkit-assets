@@ -41,7 +41,7 @@ void main(Scene@ scene)
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{83a5f37d-e458-5a58-a027-a0f2b0982c53}");
-  materialUuid = fallbackMaterial;
+  materialUuid = Uuid<Material>("{173f0093-02b2-4703-9146-2bc310fc780f}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
@@ -51,7 +51,7 @@ void main(Scene@ scene)
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{a73125d3-2429-5df4-9390-a7ff1fcabaeb}");
-  materialUuid = fallbackMaterial;
+  materialUuid = Uuid<Material>("{b56e290f-c3c6-40da-9f2f-c9a5df55495f}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
@@ -61,7 +61,7 @@ void main(Scene@ scene)
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{eeb686d9-a810-53b8-8d10-3b07736857fd}");
-  materialUuid = fallbackMaterial;
+  materialUuid = Uuid<Material>("{c12d56be-680d-4a7b-8e3a-0239332f8489}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
@@ -71,7 +71,7 @@ void main(Scene@ scene)
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{36211c7c-defc-58aa-a82a-e629f6c2374a}");
-  materialUuid = fallbackMaterial;
+  materialUuid = Uuid<Material>("{bf1f0442-91f0-4a5a-9b77-08e853dee247}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
@@ -81,7 +81,7 @@ void main(Scene@ scene)
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   meshUuid = Uuid<StaticMesh>("{cf6ce03d-55ae-5219-979c-94ce01bc0a16}");
-  materialUuid = fallbackMaterial;
+  materialUuid = Uuid<Material>("{61c8077c-ea53-4a3d-9589-a90935cd72e9}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
