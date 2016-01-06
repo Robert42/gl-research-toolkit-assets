@@ -3,25 +3,33 @@ void main(Scene@ scene)
   ResourceGroup group(Uuid<ResourceGroup>("{336a9321-fb5f-4566-9c1c-4a88832bda48}"));
   Node@ node;
   Uuid<Node> nodeUuid;
-
-  nodeUuid = Uuid<Node>("{2aac4fd3-3970-5178-a1d5-5611c9bc64dd}");
-  node = Node(scene: scene, uuid: nodeUuid);
+  Uuid<Camera> cameraUuid;
 
   nodeUuid = Uuid<Node>("{b7b3bb94-81c9-5d0b-a2c6-430f593e6b57}");
+  group.add(nodeUuid);
   node = Node(scene: scene, uuid: nodeUuid);
 
   nodeUuid = Uuid<Node>("{6cda7a6d-81ab-5b95-9bbc-10c2a8f3e1a7}");
+  group.add(nodeUuid);
   node = Node(scene: scene, uuid: nodeUuid);
 
   nodeUuid = Uuid<Node>("{2c7d2b7d-30c3-5aed-8085-3edd97283791}");
+  group.add(nodeUuid);
   node = Node(scene: scene, uuid: nodeUuid);
 
   nodeUuid = Uuid<Node>("{20979f4b-e4b1-5edb-8f34-a9912d43d4d4}");
+  group.add(nodeUuid);
   node = Node(scene: scene, uuid: nodeUuid);
 
   nodeUuid = Uuid<Node>("{b98a61b5-95f4-5781-b17c-2ad89d593ef1}");
+  group.add(nodeUuid);
   node = Node(scene: scene, uuid: nodeUuid);
+  cameraUuid = Uuid<Node>("{0c030d6c-64f8-5558-9dec-76144396832f}");
+  group.labels[cameraUuid] = "camera";
+  group.add(cameraUuid);
+  CameraComponent(node: node, uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
 
   nodeUuid = Uuid<Node>("{4cd17d04-6d45-5031-96e7-2b13670fc765}");
+  group.add(nodeUuid);
   node = Node(scene: scene, uuid: nodeUuid);
 }
