@@ -9,6 +9,14 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['mirror-roughness-0_2'] = mirrorRoughness_20;
   importSettings.materialUuids['mirror-roughness-0_3'] = mirrorRoughness_30;
   importSettings.materialUuids['mirror-roughness-0_4'] = mirrorRoughness_40;
+  importSettings.materialUuids['leftWall'] = leftWall;
+  importSettings.materialUuids['rightWall'] = rightWall;
+  importSettings.materialUuids['wall'] = wall;
+  importSettings.materialUuids['light'] = lightMaterial;
+  
+  importSettings.lightUuids['cornellBox-rectAreaLight'] = cornellBox_rectAreaLight;
+  importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = cornellBox_roughness_rectAreaLight;
+  importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = cornellBox_roughness_sphereAreaLight;
 
   convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
                     sourceFile: "cornell-box.blend",
