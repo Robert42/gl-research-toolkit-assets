@@ -14,6 +14,12 @@ void main(ResourceIndex@ index, Scene@ scene)
   loadMeshes(group);
 
 
+  nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
+  group.labels[nodeUuid] = "Scene";
+  group.add(nodeUuid);
+  node = Node::create(scene: scene, uuid: nodeUuid);
+  Component::create(node: node, uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
+
   nodeUuid = Uuid<Node>("{dbb5b14b-dbe8-5650-b5fc-3387c149a6e0}");
   group.labels[nodeUuid] = "walls";
   group.add(nodeUuid);
@@ -33,6 +39,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "walls";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1), quat(0, 0, 0, 1), 1);
 
   nodeUuid = Uuid<Node>("{0be7a355-b8d1-545a-88c7-5af0dec9beca}");
   group.labels[nodeUuid] = "mirror-roughness-0_4";
@@ -43,6 +50,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0.447068, 0.376232), quat(0.266002, 0, 0, 0.963973), 1);
 
   nodeUuid = Uuid<Node>("{c5decb95-6365-5a05-89e0-b227826175bc}");
   group.labels[nodeUuid] = "mirror-roughness-0_3";
@@ -53,6 +61,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0.102829, 0.376232), quat(0.183609, 0, 0, 0.982999), 1);
 
   nodeUuid = Uuid<Node>("{2f86f22f-8f6c-5b02-9a87-5608bf7d9406}");
   group.labels[nodeUuid] = "mirror-roughness-0_2";
@@ -63,6 +72,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.24037, 0.376232), quat(0.111068, 0, 0, 0.993813), 1);
 
   nodeUuid = Uuid<Node>("{1b4a550b-1bce-52e0-b658-5412e3b5053e}");
   group.labels[nodeUuid] = "mirror-roughness-0_1";
@@ -73,6 +83,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.562446, 0.376232), quat(0.0515086, 0, 0, 0.998673), 1);
 
   nodeUuid = Uuid<Node>("{87059266-2203-537a-8607-a6b52cb6b638}");
   group.labels[nodeUuid] = "mirror-roughness-0_0";
@@ -83,6 +94,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.874809, 0.376232), quat(6.12175e-05, 0, 0, 1), 1);
 
   nodeUuid = Uuid<Node>("{622f23be-be81-567a-816d-49773c2c10a0}");
   group.labels[nodeUuid] = "light-sphere";
@@ -93,6 +105,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "light-sphere";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.7, 0.5, 1.6), quat(0, 0, 0, 1), 1);
 
   nodeUuid = Uuid<Node>("{fe1f803b-4d53-5f15-9da3-a072966e38b8}");
   group.labels[nodeUuid] = "light-rect";
@@ -103,6 +116,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[meshUuid] = "light-rect";
   group.add(meshUuid);
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(-0.34202, 0, 0, 0.939693), 1);
 
   nodeUuid = Uuid<Node>("{0c3e443e-700f-56f0-9ee2-4a1a7e55284e}");
   group.labels[nodeUuid] = "debug-rect-are-light";
@@ -112,6 +126,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[cameraUuid] = "debug-rect-are-light";
   group.add(cameraUuid);
   CameraComponent::create(node: node, uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.30461, 0.616869, 1.16255), quat(-0.508291, 0.627565, 0.458287, -0.371181), 1);
 
   nodeUuid = Uuid<Node>("{6761f72b-edfb-5b54-acf4-73169b165fbb}");
   group.labels[nodeUuid] = "cornellBox-roughness-sphereAreaLight";
@@ -121,6 +136,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[lightUuid] = "cornellBox-roughness-sphereAreaLight";
   group.add(lightUuid);
   LightComponent::create(node: node, uuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.7, 0.5, 1.6), quat(0, 0, 0, 1), 1);
 
   nodeUuid = Uuid<Node>("{345ea969-1da2-5999-a018-ddd23ded8767}");
   group.labels[nodeUuid] = "cornellBox-roughness-rectAreaLight";
@@ -130,6 +146,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[lightUuid] = "cornellBox-roughness-rectAreaLight";
   group.add(lightUuid);
   LightComponent::create(node: node, uuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(0, 0, 0, 1), 1);
 
   nodeUuid = Uuid<Node>("{ed3c23d6-615c-5b4d-b07d-a5f5f8165446}");
   group.labels[nodeUuid] = "camera";
@@ -139,4 +156,5 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[cameraUuid] = "camera";
   group.add(cameraUuid);
   CameraComponent::create(node: node, uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -2.8, 2.05), quat(0.5373, 1.05227e-07, -6.70368e-08, 0.843391), 1);
 }
