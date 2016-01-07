@@ -8,7 +8,7 @@ void main(Scene@ scene)
   Node@ node;
   Uuid<Node> nodeUuid;
   Uuid<Camera> cameraUuid;
-  Uuid<Light> lightUuid;
+  Uuid<LightSource> lightUuid;
   Uuid<StaticMesh> meshUuid;
   Uuid<Material> materialUuid;
 
@@ -118,7 +118,7 @@ void main(Scene@ scene)
   group.labels[nodeUuid] = "cornellBox-roughness-sphereAreaLight";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  lightUuid = Uuid<Light>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
+  lightUuid = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
   group.labels[lightUuid] = "cornellBox-roughness-sphereAreaLight";
   group.add(lightUuid);
   LightComponent::create(node: node, uuid: lightUuid);
@@ -127,7 +127,7 @@ void main(Scene@ scene)
   group.labels[nodeUuid] = "cornellBox-roughness-rectAreaLight";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  lightUuid = Uuid<Light>("{45ce7810-2d26-4ba0-9312-757117d58223}");
+  lightUuid = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
   group.labels[lightUuid] = "cornellBox-roughness-rectAreaLight";
   group.add(lightUuid);
   LightComponent::create(node: node, uuid: lightUuid);

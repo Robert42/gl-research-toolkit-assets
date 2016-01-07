@@ -8,6 +8,6 @@ Uuid<Material> rightWall = Uuid<Material>("{e22cb1e5-428d-4c3a-9657-41a1df21d3e4
 Uuid<Material> wall = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
 Uuid<Material> lightMaterial = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
 
-Uuid<Light> cornellBox_rectAreaLight = Uuid<Light>("{9af43699-566a-457b-904a-acbbb6f8c690}");
-Uuid<Light> cornellBox_roughness_sphereAreaLight = Uuid<Light>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
-Uuid<Light> cornellBox_roughness_rectAreaLight = Uuid<Light>("{45ce7810-2d26-4ba0-9312-757117d58223}");
+Uuid<LightSource> cornellBox_rectAreaLight = Uuid<LightSource>("{9af43699-566a-457b-904a-acbbb6f8c690}");
+Uuid<LightSource> cornellBox_roughness_sphereAreaLight = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
+Uuid<LightSource> cornellBox_roughness_rectAreaLight = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
