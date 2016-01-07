@@ -26,39 +26,44 @@ void main(ResourceIndex@ index)
                           sourceFile: "cornell-box-roughness.blend",
                           settings: importSettings);
 
-  /*
+  PlainColorMaterial wallPlainMaterial;
+  wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
+  wallPlainMaterial.smoothness = 0.3;
+  PlainColorMaterial lightPlainMaterial;
+  lightPlainMaterial.base_color = vec3(0);
+  lightPlainMaterial.emission = vec3(1);
+  PlainColorMaterial mirrorPlainMaterial;
+  mirrorPlainMaterial.base_color = vec3(1);
+  mirrorPlainMaterial.metal_mask = 1.0;
+  
   index.registerMaterial(uuid: leftWall,
-                         material: Material::plainColor(base_color: vec3(0.631, 0.065, 0.050),
-                                                        smoothness: 0.3));
+                         material: wallPlainMaterial);
+  wallPlainMaterial.base_color = vec3(0.14, 0.45, 0.091);
   index.registerMaterial(uuid: rightWall,
-                         material: Material::plainColor(base_color: vec3(0.14, 0.45, 0.091),
-                                                        smoothness: 0.3));
+                         material: wallPlainMaterial);
+  wallPlainMaterial.base_color = vec3(0.723);
   index.registerMaterial(uuid: wall,
-                         material: Material::plainColor(base_color: vec3(0.723),
-                                                        smoothness: 0.3));
+                         material: wallPlainMaterial);
+                         
   index.registerMaterial(uuid: lightMaterial,
-                         material: Material::plainColor(emission: vec3(1)));
+                         material: lightPlainMaterial);
+                         
+  mirrorPlainMaterial.smoothness = 1.0;
   index.registerMaterial(uuid: mirrorRoughness_00,
-                         material: Material::plainColor(base_color: vec3(1),
-                                                        smoothness: 1.0,
-                                                        metal_mask: 1));
+                         material: mirrorPlainMaterial);
+  mirrorPlainMaterial.smoothness = 0.9;
   index.registerMaterial(uuid: mirrorRoughness_10,
-                        material: Material::plainColor(base_color: vec3(1),
-                                                       smoothness: 0.9,
-                                                       metal_mask: 1));
+                        material: mirrorPlainMaterial);
+  mirrorPlainMaterial.smoothness = 0.8;
   index.registerMaterial(uuid: mirrorRoughness_20,
-                        material: Material::plainColor(base_color: vec3(1),
-                                                      smoothness: 0.8,
-                                                      metal_mask: 1));
+                        material: mirrorPlainMaterial);
+  mirrorPlainMaterial.smoothness = 0.7;
   index.registerMaterial(uuid: mirrorRoughness_30,
-                         material: Material::plainColor(base_color: vec3(1),
-                                                        smoothness: 0.7,
-                                                        metal_mask: 1));
+                         material: mirrorPlainMaterial);
+  mirrorPlainMaterial.smoothness = 0.6;
   index.registerMaterial(uuid: mirrorRoughness_40,
-                         material: Material::plainColor(base_color: vec3(1),
-                                                        smoothness: 0.6,
-                                                        metal_mask: 1));
-  */
+                         material: mirrorPlainMaterial);
+
   RectAreaLightSource rectAreaLight;
   SphereAreaLightSource sphereAreaLight;
   
