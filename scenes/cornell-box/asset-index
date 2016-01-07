@@ -25,4 +25,51 @@ void main(ResourceIndex@ index)
   index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness.scene-graph",
                           sourceFile: "cornell-box-roughness.blend",
                           settings: importSettings);
+
+  /*
+  index.registerMaterial(uuid: leftWall,
+                         material: Material::plainColor(base_color: vec3(0.631, 0.065, 0.050),
+                                                        smoothness: 0.3));
+  index.registerMaterial(uuid: rightWall,
+                         material: Material::plainColor(base_color: vec3(0.14, 0.45, 0.091),
+                                                        smoothness: 0.3));
+  index.registerMaterial(uuid: wall,
+                         material: Material::plainColor(base_color: vec3(0.723),
+                                                        smoothness: 0.3));
+  index.registerMaterial(uuid: lightMaterial,
+                         material: Material::plainColor(emission: vec3(1)));
+  index.registerMaterial(uuid: mirrorRoughness_00,
+                         material: Material::plainColor(base_color: vec3(1),
+                                                        smoothness: 1.0,
+                                                        metal_mask: 1));
+  index.registerMaterial(uuid: mirrorRoughness_10,
+                        material: Material::plainColor(base_color: vec3(1),
+                                                       smoothness: 0.9,
+                                                       metal_mask: 1));
+  index.registerMaterial(uuid: mirrorRoughness_20,
+                        material: Material::plainColor(base_color: vec3(1),
+                                                      smoothness: 0.8,
+                                                      metal_mask: 1));
+  index.registerMaterial(uuid: mirrorRoughness_30,
+                         material: Material::plainColor(base_color: vec3(1),
+                                                        smoothness: 0.7,
+                                                        metal_mask: 1));
+  index.registerMaterial(uuid: mirrorRoughness_40,
+                         material: Material::plainColor(base_color: vec3(1),
+                                                        smoothness: 0.6,
+                                                        metal_mask: 1));
+  */
+  RectAreaLightSource rectAreaLight;
+  SphereAreaLightSource sphereAreaLight;
+  
+  rectAreaLight.size = vec2(0.47, 0.38);
+  index.registerLightSource(uuid: cornellBox_rectAreaLight,
+                            light: rectAreaLight);
+                            
+  rectAreaLight.size = vec2(0.3);
+  index.registerLightSource(uuid: cornellBox_roughness_rectAreaLight,
+                            light: rectAreaLight);
+  sphereAreaLight.radius = 0.1125;
+  index.registerLightSource(uuid: cornellBox_roughness_sphereAreaLight,
+                            light: sphereAreaLight);
 }

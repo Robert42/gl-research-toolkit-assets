@@ -5,6 +5,6 @@ void main(ResourceIndex@ index)
   index.convertStaticMesh(meshFile: "suzanne.mesh", sourceFile: "suzanne.blend");
   index.convertStaticMesh(meshFile: "suzanne-smooth.mesh", sourceFile: "suzanne-smooth.blend");
 
-  index.registerAsset(uuids::low_poly, "suzanne.mesh");
-  index.registerAsset(uuids::smooth, "suzanne-smooth.mesh");
+  index.registerStaticMesh(uuids::low_poly, file: "suzanne.mesh");
+  index.registerStaticMesh(uuids::smooth, file: "suzanne-smooth.mesh");
 }
