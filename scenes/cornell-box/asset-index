@@ -18,13 +18,11 @@ void main(ResourceIndex@ index)
   importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = cornellBox_roughness_rectAreaLight;
   importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = cornellBox_roughness_sphereAreaLight;
 
-  convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
-                    sourceFile: "cornell-box.blend",
-                    uuid: Uuid<ResourceGroup>("{336a9321-fb5f-4566-9c1c-4a88832bda48}"),
-                    settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          settings: importSettings);
 
-  convertSceneGraph(sceneGraphFile: "cornell-box-roughness.scene-graph",
-                    sourceFile: "cornell-box-roughness.blend",
-                    uuid: Uuid<ResourceGroup>("{273100e0-d20d-4d66-9fad-f893b9428b8d}"),
-                    settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness.scene-graph",
+                          sourceFile: "cornell-box-roughness.blend",
+                          settings: importSettings);
 }
