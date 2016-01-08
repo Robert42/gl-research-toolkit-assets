@@ -45,7 +45,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[nodeUuid] = "mirror-roughness-0_4";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  meshUuid = Uuid<StaticMesh>("{6fe96f40-b7f2-5c26-9c04-9951899ed497}");
+  meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{173f0093-02b2-4703-9146-2bc310fc780f}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
@@ -56,7 +56,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[nodeUuid] = "mirror-roughness-0_3";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  meshUuid = Uuid<StaticMesh>("{6a970d65-54c9-5386-b765-e08aafe66a6c}");
+  meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{b56e290f-c3c6-40da-9f2f-c9a5df55495f}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
@@ -67,7 +67,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[nodeUuid] = "mirror-roughness-0_2";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  meshUuid = Uuid<StaticMesh>("{bc1852b3-9f52-50cf-a15a-78093eff1e99}");
+  meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{c12d56be-680d-4a7b-8e3a-0239332f8489}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
@@ -78,7 +78,7 @@ void main(ResourceIndex@ index, Scene@ scene)
   group.labels[nodeUuid] = "mirror-roughness-0_1";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
-  meshUuid = Uuid<StaticMesh>("{8a9258ef-e774-52b3-88b2-fbe6d33b296f}");
+  meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{bf1f0442-91f0-4a5a-9b77-08e853dee247}");
   group.labels[meshUuid] = "mirror";
   group.add(meshUuid);
