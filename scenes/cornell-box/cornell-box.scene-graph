@@ -4,7 +4,6 @@ void main(ResourceLoader@ loader, Scene@ scene)
 {
   scene.loadGroup(group);
 
-  ResourceIndex@ index = loader.index;
   Node@ node;
   Uuid<Node> nodeUuid;
   Uuid<Camera> cameraUuid;
@@ -15,7 +14,7 @@ void main(ResourceLoader@ loader, Scene@ scene)
   loadMeshes(loader);
 
 
- // ======== Node "short-cube" ========
+// ======== Node "short-cube" ========
   nodeUuid = Uuid<Node>("{05995808-7244-5c2a-bac0-2545614be7db}");
   group.labels[nodeUuid] = "short-cube";
   group.add(nodeUuid);
@@ -28,7 +27,7 @@ void main(ResourceLoader@ loader, Scene@ scene)
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.329001, -0.370598, 0.3), quat(0, 0, -0.147809, 0.989016), 1);
 
- // ======== Node "long-cube" ========
+// ======== Node "long-cube" ========
   nodeUuid = Uuid<Node>("{1efce5f6-3eaa-50a0-9020-2a7f98592135}");
   group.labels[nodeUuid] = "long-cube";
   group.add(nodeUuid);
@@ -41,7 +40,7 @@ void main(ResourceLoader@ loader, Scene@ scene)
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.338494, 0.287716, 0.6), quat(0, 0, 0.147809, 0.989016), 1);
 
- // ======== Node "light-dummy" ========
+// ======== Node "light-dummy" ========
   nodeUuid = Uuid<Node>("{442cd1a6-4fde-5b98-9a30-137f7307fe0e}");
   group.labels[nodeUuid] = "light-dummy";
   group.add(nodeUuid);
@@ -54,19 +53,19 @@ void main(ResourceLoader@ loader, Scene@ scene)
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1.98), quat(0, 0, 0, 1), 1);
 
- // ======== Node "cornellBox-rectAreaLight" ========
+// ======== Node "cornellBox-rectAreaLight" ========
   nodeUuid = Uuid<Node>("{54efa8c7-89ee-5363-9de6-7890a183544a}");
   group.labels[nodeUuid] = "cornellBox-rectAreaLight";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
- // Light "cornellBox-rectAreaLight"
+  // Light "cornellBox-rectAreaLight"
   lightUuid = Uuid<LightSource>("{9af43699-566a-457b-904a-acbbb6f8c690}");
   group.labels[lightUuid] = "cornellBox-rectAreaLight";
   group.add(lightUuid);
   LightComponent::create(node: node, uuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1.98), quat(0, 0, 0, 1), 1);
 
- // ======== Node "walls" ========
+// ======== Node "walls" ========
   nodeUuid = Uuid<Node>("{dbb5b14b-dbe8-5650-b5fc-3387c149a6e0}");
   group.labels[nodeUuid] = "walls";
   group.add(nodeUuid);
@@ -91,19 +90,20 @@ void main(ResourceLoader@ loader, Scene@ scene)
   StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1), quat(0, 0, 0, 1), 1);
 
- // ======== Node "Scene" ========
+// ======== Node "Scene" ========
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
   group.labels[nodeUuid] = "Scene";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
   Component::create(node: node, uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(-0.707107, 0, 0, 0.707107), 1);
 
- // ======== Node "camera" ========
+// ======== Node "camera" ========
   nodeUuid = Uuid<Node>("{ed3c23d6-615c-5b4d-b07d-a5f5f8165446}");
   group.labels[nodeUuid] = "camera";
   group.add(nodeUuid);
   node = Node::create(scene: scene, uuid: nodeUuid);
- // Camera "camera"
+  // Camera "camera"
   cameraUuid = Uuid<Node>("{2396816d-aa17-5f58-bdcf-8cf99eb79e68}");
   group.labels[cameraUuid] = "camera";
   group.add(cameraUuid);
