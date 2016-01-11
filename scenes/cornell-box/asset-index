@@ -26,10 +26,10 @@ void main(ResourceIndex@ index)
                           sourceFile: "cornell-box-roughness.blend",
                           settings: importSettings);
                           
-  index.registerSceneFile(uuid: Uuids::cornellBoxScene,
-                          file: "cornell-box.scene");
-  index.registerSceneFile(uuid: Uuids::cornellBoxRoughnessScene,
-                          file: "cornell-box-roughness.scene");
+  index.registerSceneLayerFile(uuid: Uuids::cornellBoxScene,
+                               file: "cornell-box.scene-layer");
+  index.registerSceneLayerFile(uuid: Uuids::cornellBoxRoughnessScene,
+                               file: "cornell-box-roughness.scene-layer");
 
   PlainColorMaterial wallPlainMaterial;
   wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
