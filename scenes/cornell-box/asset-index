@@ -4,19 +4,19 @@ void main(ResourceIndex@ index)
 {
   SceneGraphImportSettings importSettings;
   
-  importSettings.materialUuids['mirror-roughness-0_0'] = mirrorRoughness_00;
-  importSettings.materialUuids['mirror-roughness-0_1'] = mirrorRoughness_10;
-  importSettings.materialUuids['mirror-roughness-0_2'] = mirrorRoughness_20;
-  importSettings.materialUuids['mirror-roughness-0_3'] = mirrorRoughness_30;
-  importSettings.materialUuids['mirror-roughness-0_4'] = mirrorRoughness_40;
-  importSettings.materialUuids['leftWall'] = leftWall;
-  importSettings.materialUuids['rightWall'] = rightWall;
-  importSettings.materialUuids['wall'] = wall;
-  importSettings.materialUuids['light'] = lightMaterial;
+  importSettings.materialUuids['mirror-roughness-0_0'] = Uuids::mirrorRoughness_00;
+  importSettings.materialUuids['mirror-roughness-0_1'] = Uuids::mirrorRoughness_10;
+  importSettings.materialUuids['mirror-roughness-0_2'] = Uuids::mirrorRoughness_20;
+  importSettings.materialUuids['mirror-roughness-0_3'] = Uuids::mirrorRoughness_30;
+  importSettings.materialUuids['mirror-roughness-0_4'] = Uuids::mirrorRoughness_40;
+  importSettings.materialUuids['leftWall'] = Uuids::leftWall;
+  importSettings.materialUuids['rightWall'] = Uuids::rightWall;
+  importSettings.materialUuids['wall'] = Uuids::wall;
+  importSettings.materialUuids['light'] = Uuids::lightMaterial;
   
-  importSettings.lightUuids['cornellBox-rectAreaLight'] = cornellBox_rectAreaLight;
-  importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = cornellBox_roughness_rectAreaLight;
-  importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = cornellBox_roughness_sphereAreaLight;
+  importSettings.lightUuids['cornellBox-rectAreaLight'] = Uuids::cornellBox_rectAreaLight;
+  importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = Uuids::cornellBox_roughness_rectAreaLight;
+  importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = Uuids::cornellBox_roughness_sphereAreaLight;
 
   index.convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
                           sourceFile: "cornell-box.blend",
@@ -25,6 +25,11 @@ void main(ResourceIndex@ index)
   index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness.scene-graph",
                           sourceFile: "cornell-box-roughness.blend",
                           settings: importSettings);
+                          
+  index.registerSceneFile(uuid: Uuids::cornellBoxScene,
+                          file: "cornell-box.scene");
+  index.registerSceneFile(uuid: Uuids::cornellBoxRoughnessScene,
+                          file: "cornell-box-roughness.scene");
 
   PlainColorMaterial wallPlainMaterial;
   wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
@@ -36,45 +41,45 @@ void main(ResourceIndex@ index)
   mirrorPlainMaterial.base_color = vec3(1);
   mirrorPlainMaterial.metal_mask = 1.0;
   
-  index.registerMaterial(uuid: leftWall,
+  index.registerMaterial(uuid: Uuids::leftWall,
                          material: wallPlainMaterial);
   wallPlainMaterial.base_color = vec3(0.14, 0.45, 0.091);
-  index.registerMaterial(uuid: rightWall,
+  index.registerMaterial(uuid: Uuids::rightWall,
                          material: wallPlainMaterial);
   wallPlainMaterial.base_color = vec3(0.723);
-  index.registerMaterial(uuid: wall,
+  index.registerMaterial(uuid: Uuids::wall,
                          material: wallPlainMaterial);
                          
-  index.registerMaterial(uuid: lightMaterial,
+  index.registerMaterial(uuid: Uuids::lightMaterial,
                          material: lightPlainMaterial);
                          
   mirrorPlainMaterial.smoothness = 1.0;
-  index.registerMaterial(uuid: mirrorRoughness_00,
+  index.registerMaterial(uuid: Uuids::mirrorRoughness_00,
                          material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.9;
-  index.registerMaterial(uuid: mirrorRoughness_10,
+  index.registerMaterial(uuid: Uuids::mirrorRoughness_10,
                         material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.8;
-  index.registerMaterial(uuid: mirrorRoughness_20,
+  index.registerMaterial(uuid: Uuids::mirrorRoughness_20,
                         material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.7;
-  index.registerMaterial(uuid: mirrorRoughness_30,
+  index.registerMaterial(uuid: Uuids::mirrorRoughness_30,
                          material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.6;
-  index.registerMaterial(uuid: mirrorRoughness_40,
+  index.registerMaterial(uuid: Uuids::mirrorRoughness_40,
                          material: mirrorPlainMaterial);
 
   RectAreaLightSource rectAreaLight;
   SphereAreaLightSource sphereAreaLight;
   
   rectAreaLight.size = vec2(0.47, 0.38);
-  index.registerLightSource(uuid: cornellBox_rectAreaLight,
+  index.registerLightSource(uuid: Uuids::cornellBox_rectAreaLight,
                             light: rectAreaLight);
                             
   rectAreaLight.size = vec2(0.3);
-  index.registerLightSource(uuid: cornellBox_roughness_rectAreaLight,
+  index.registerLightSource(uuid: Uuids::cornellBox_roughness_rectAreaLight,
                             light: rectAreaLight);
   sphereAreaLight.radius = 0.1125;
-  index.registerLightSource(uuid: cornellBox_roughness_sphereAreaLight,
+  index.registerLightSource(uuid: Uuids::cornellBox_roughness_sphereAreaLight,
                             light: sphereAreaLight);
 }
