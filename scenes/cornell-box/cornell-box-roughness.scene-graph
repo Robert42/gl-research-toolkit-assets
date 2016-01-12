@@ -17,7 +17,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{0be7a355-b8d1-545a-88c7-5af0dec9beca}");
   sceneLayer.labels[nodeUuid] = "mirror-roughness-0_4";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 6)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{173f0093-02b2-4703-9146-2bc310fc780f}");
@@ -30,7 +30,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{0c3e443e-700f-56f0-9ee2-4a1a7e55284e}");
   sceneLayer.labels[nodeUuid] = "debug-rect-are-light";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // Camera "debug-rect-are-light"
   cameraUuid = Uuid<Node>("{956c387f-aa14-5124-a268-3cc296716372}");
   sceneLayer.labels[cameraUuid] = "debug-rect-are-light";
@@ -42,7 +42,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{1b4a550b-1bce-52e0-b658-5412e3b5053e}");
   sceneLayer.labels[nodeUuid] = "mirror-roughness-0_1";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 3)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{bf1f0442-91f0-4a5a-9b77-08e853dee247}");
@@ -55,7 +55,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{2f86f22f-8f6c-5b02-9a87-5608bf7d9406}");
   sceneLayer.labels[nodeUuid] = "mirror-roughness-0_2";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 4)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{c12d56be-680d-4a7b-8e3a-0239332f8489}");
@@ -68,7 +68,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{345ea969-1da2-5999-a018-ddd23ded8767}");
   sceneLayer.labels[nodeUuid] = "cornellBox-roughness-rectAreaLight";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // Light "cornellBox-roughness-rectAreaLight"
   lightUuid = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
   sceneLayer.labels[lightUuid] = "cornellBox-roughness-rectAreaLight";
@@ -80,7 +80,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{622f23be-be81-567a-816d-49773c2c10a0}");
   sceneLayer.labels[nodeUuid] = "light-sphere";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "light-sphere" -- (assimp index 1)
   meshUuid = Uuid<StaticMesh>("{05818743-b77b-5849-9470-c1ae45329c39}");
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
@@ -93,7 +93,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{6761f72b-edfb-5b54-acf4-73169b165fbb}");
   sceneLayer.labels[nodeUuid] = "cornellBox-roughness-sphereAreaLight";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // Light "cornellBox-roughness-sphereAreaLight"
   lightUuid = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
   sceneLayer.labels[lightUuid] = "cornellBox-roughness-sphereAreaLight";
@@ -105,7 +105,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{87059266-2203-537a-8607-a6b52cb6b638}");
   sceneLayer.labels[nodeUuid] = "mirror-roughness-0_0";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 2)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{61c8077c-ea53-4a3d-9589-a90935cd72e9}");
@@ -118,7 +118,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{c5decb95-6365-5a05-89e0-b227826175bc}");
   sceneLayer.labels[nodeUuid] = "mirror-roughness-0_3";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 5)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{b56e290f-c3c6-40da-9f2f-c9a5df55495f}");
@@ -131,7 +131,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{dbb5b14b-dbe8-5650-b5fc-3387c149a6e0}");
   sceneLayer.labels[nodeUuid] = "walls";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "walls" -- (assimp index 7)
   meshUuid = Uuid<StaticMesh>("{2b5fe147-bb87-5a08-871f-effe1812c754}");
   materialUuid = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
@@ -156,7 +156,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
   sceneLayer.labels[nodeUuid] = "Scene";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   Component::create(node: node, uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(-0.707107, 0, 0, 0.707107), 1);
 
@@ -164,7 +164,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{ed3c23d6-615c-5b4d-b07d-a5f5f8165446}");
   sceneLayer.labels[nodeUuid] = "camera";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // Camera "camera"
   cameraUuid = Uuid<Node>("{2396816d-aa17-5f58-bdcf-8cf99eb79e68}");
   sceneLayer.labels[cameraUuid] = "camera";
@@ -176,7 +176,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{fe1f803b-4d53-5f15-9da3-a072966e38b8}");
   sceneLayer.labels[nodeUuid] = "light-rect";
   sceneLayer.add(nodeUuid);
-  node = Node::create(scene: scene, uuid: nodeUuid);
+  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
   // StaticMesh "light-rect" -- (assimp index 0)
   meshUuid = Uuid<StaticMesh>("{9d313d72-0ede-55a4-b7ff-f620ee939b0d}");
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
