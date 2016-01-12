@@ -15,7 +15,10 @@ Uuid<LightSource> cornellBox_roughness_sphereAreaLight = Uuid<LightSource>("{c98
 Uuid<LightSource> cornellBox_roughness_rectAreaLight = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
 
 
-Uuid<SceneLayer> cornellBoxScene = Uuid<SceneLayer>("{4b023cc9-a061-43d4-8b9c-e6225e707296}");
-Uuid<SceneLayer> cornellBoxRoughnessScene = Uuid<SceneLayer>("{5bcadedc-bde5-44e7-875a-0a5a46c3c80c}");
+Uuid<SceneLayer> cornellBoxSceneLayer = Uuid<SceneLayer>("{4b023cc9-a061-43d4-8b9c-e6225e707296}");
+Uuid<SceneLayer> cornellBoxRoughnessSceneLayer = Uuid<SceneLayer>("{5bcadedc-bde5-44e7-875a-0a5a46c3c80c}");
+
+Uuid<Scene> cornellBoxScene = Uuid<Scene>("{158da3d3-ef79-4895-add4-f2fe22c0dbff}");
+Uuid<Scene> cornellBoxRoughnessScene = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 
 } // namespace namespace Uuid

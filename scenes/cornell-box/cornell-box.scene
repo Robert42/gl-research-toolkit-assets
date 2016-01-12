@@ -1,0 +1,6 @@
+#include "uuids.as"
+
+void main(Scene@ scene)
+{
+  scene.loadSceneLayer(Uuids::cornellBoxSceneLayer);
+}
