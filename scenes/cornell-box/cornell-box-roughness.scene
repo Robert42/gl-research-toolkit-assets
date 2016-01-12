@@ -2,5 +2,5 @@
 
 void main(Scene@ scene)
 {
-  scene.loadSceneLayer(Uuids::cornellBoxRoughnessSceneLayer);
+  scene.loadSceneLayer(uuids::cornellBoxRoughnessSceneLayer);
 }

@@ -2,5 +2,5 @@
 
 void main(Scene@ scene)
 {
-  scene.loadSceneLayer(Uuids::cornellBoxSceneLayer);
+  scene.loadSceneLayer(uuids::cornellBoxSceneLayer);
 }
