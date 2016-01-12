@@ -1,4 +1,4 @@
-namespace Uuids {
+namespace uuids {
 
 Uuid<Material> mirrorRoughness_00 = Uuid<Material>("{61c8077c-ea53-4a3d-9589-a90935cd72e9}");
 Uuid<Material> mirrorRoughness_10 = Uuid<Material>("{bf1f0442-91f0-4a5a-9b77-08e853dee247}");
@@ -21,4 +21,4 @@ Uuid<SceneLayer> cornellBoxRoughnessSceneLayer = Uuid<SceneLayer>("{5bcadedc-bde
 Uuid<Scene> cornellBoxScene = Uuid<Scene>("{158da3d3-ef79-4895-add4-f2fe22c0dbff}");
 Uuid<Scene> cornellBoxRoughnessScene = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 
-} // namespace namespace Uuid
+} // namespace namespace uuids
