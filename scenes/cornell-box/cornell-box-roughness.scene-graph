@@ -18,172 +18,145 @@ void main(SceneLayer@ sceneLayer)
 // ======== Node "mirror-roughness-0_4" ========
   nodeUuid = Uuid<Node>("{0be7a355-b8d1-545a-88c7-5af0dec9beca}");
   sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_4";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 6)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{173f0093-02b2-4703-9146-2bc310fc780f}");
   sceneLayer.index.label[meshUuid] = "mirror";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{63a48819-3731-5faf-877d-e62a925510d1}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0.447068, 0.376232), quat(0.266002, 0, 0, 0.963973), 1);
 
 // ======== Node "debug-rect-are-light" ========
   nodeUuid = Uuid<Node>("{0c3e443e-700f-56f0-9ee2-4a1a7e55284e}");
   sceneLayer.index.label[nodeUuid] = "debug-rect-are-light";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // Camera "debug-rect-are-light"
   cameraUuid = Uuid<Node>("{956c387f-aa14-5124-a268-3cc296716372}");
   sceneLayer.index.label[cameraUuid] = "debug-rect-are-light";
-  sceneLayer.add(cameraUuid);
-  CameraComponent::create(node: node, uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  node.newCameraComponent(uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.30461, 0.616869, 1.16255), quat(-0.508291, 0.627565, 0.458287, -0.371181), 1);
 
 // ======== Node "mirror-roughness-0_1" ========
   nodeUuid = Uuid<Node>("{1b4a550b-1bce-52e0-b658-5412e3b5053e}");
   sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_1";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 3)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{bf1f0442-91f0-4a5a-9b77-08e853dee247}");
   sceneLayer.index.label[meshUuid] = "mirror";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{3a642402-44c1-5de2-a4fc-e63af8f7e463}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.562446, 0.376232), quat(0.0515086, 0, 0, 0.998673), 1);
 
 // ======== Node "mirror-roughness-0_2" ========
   nodeUuid = Uuid<Node>("{2f86f22f-8f6c-5b02-9a87-5608bf7d9406}");
   sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_2";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 4)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{c12d56be-680d-4a7b-8e3a-0239332f8489}");
   sceneLayer.index.label[meshUuid] = "mirror";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{a1a609ad-010f-5a12-8690-97ec196b2e31}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.24037, 0.376232), quat(0.111068, 0, 0, 0.993813), 1);
 
 // ======== Node "cornellBox-roughness-rectAreaLight" ========
   nodeUuid = Uuid<Node>("{345ea969-1da2-5999-a018-ddd23ded8767}");
   sceneLayer.index.label[nodeUuid] = "cornellBox-roughness-rectAreaLight";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-roughness-rectAreaLight"
   lightUuid = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
   sceneLayer.index.label[lightUuid] = "cornellBox-roughness-rectAreaLight";
-  sceneLayer.add(lightUuid);
-  LightComponent::create(node: node, uuid: lightUuid);
+  node.createLightComponent(uuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(0, 0, 0, 1), 1);
 
 // ======== Node "light-sphere" ========
   nodeUuid = Uuid<Node>("{622f23be-be81-567a-816d-49773c2c10a0}");
   sceneLayer.index.label[nodeUuid] = "light-sphere";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "light-sphere" -- (assimp index 1)
   meshUuid = Uuid<StaticMesh>("{05818743-b77b-5849-9470-c1ae45329c39}");
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{f58adaac-c2da-5dec-bee7-078b17b40be8}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.7, 0.5, 1.6), quat(0, 0, 0, 1), 1);
 
 // ======== Node "cornellBox-roughness-sphereAreaLight" ========
   nodeUuid = Uuid<Node>("{6761f72b-edfb-5b54-acf4-73169b165fbb}");
   sceneLayer.index.label[nodeUuid] = "cornellBox-roughness-sphereAreaLight";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-roughness-sphereAreaLight"
   lightUuid = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
   sceneLayer.index.label[lightUuid] = "cornellBox-roughness-sphereAreaLight";
-  sceneLayer.add(lightUuid);
-  LightComponent::create(node: node, uuid: lightUuid);
+  node.createLightComponent(uuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.7, 0.5, 1.6), quat(0, 0, 0, 1), 1);
 
 // ======== Node "mirror-roughness-0_0" ========
   nodeUuid = Uuid<Node>("{87059266-2203-537a-8607-a6b52cb6b638}");
   sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_0";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 2)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{61c8077c-ea53-4a3d-9589-a90935cd72e9}");
   sceneLayer.index.label[meshUuid] = "mirror";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{3a86c882-7bc5-56ea-beb3-993d51107b87}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.874809, 0.376232), quat(6.12175e-05, 0, 0, 1), 1);
 
 // ======== Node "mirror-roughness-0_3" ========
   nodeUuid = Uuid<Node>("{c5decb95-6365-5a05-89e0-b227826175bc}");
   sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_3";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "mirror" -- (assimp index 5)
   meshUuid = Uuid<StaticMesh>("{39440e1d-b5e1-513f-a4b3-048d1f1767f2}");
   materialUuid = Uuid<Material>("{b56e290f-c3c6-40da-9f2f-c9a5df55495f}");
   sceneLayer.index.label[meshUuid] = "mirror";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{fc311493-848f-5761-91ad-0399fdc0cb5c}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0.102829, 0.376232), quat(0.183609, 0, 0, 0.982999), 1);
 
 // ======== Node "walls" ========
   nodeUuid = Uuid<Node>("{dbb5b14b-dbe8-5650-b5fc-3387c149a6e0}");
   sceneLayer.index.label[nodeUuid] = "walls";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "walls" -- (assimp index 7)
   meshUuid = Uuid<StaticMesh>("{2b5fe147-bb87-5a08-871f-effe1812c754}");
   materialUuid = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
   sceneLayer.index.label[meshUuid] = "walls";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{30f8f955-34b2-528c-b461-0e5bf5018435}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   // StaticMesh "walls" -- (assimp index 8)
   meshUuid = Uuid<StaticMesh>("{41e440bc-f935-5a55-af7f-52a0c2ec8def}");
   materialUuid = Uuid<Material>("{032ff6cf-dea3-4912-8aa0-eb16cc9ec774}");
   sceneLayer.index.label[meshUuid] = "walls";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{fdfb6dbe-ce60-5eca-bb22-032969f7b6be}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   // StaticMesh "walls" -- (assimp index 9)
   meshUuid = Uuid<StaticMesh>("{985b86d0-9ae2-5828-92d3-5e107cd44c5f}");
   materialUuid = Uuid<Material>("{e22cb1e5-428d-4c3a-9657-41a1df21d3e4}");
   sceneLayer.index.label[meshUuid] = "walls";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{4c426160-56ee-5523-bc59-0a243e213891}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1), quat(0, 0, 0, 1), 1);
 
 // ======== Node "Scene" ========
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
   sceneLayer.index.label[nodeUuid] = "Scene";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
-  Component::create(node: node, uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  node.newEmptyComponent(uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(-0.707107, 0, 0, 0.707107), 1);
 
 // ======== Node "camera" ========
   nodeUuid = Uuid<Node>("{ed3c23d6-615c-5b4d-b07d-a5f5f8165446}");
   sceneLayer.index.label[nodeUuid] = "camera";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // Camera "camera"
   cameraUuid = Uuid<Node>("{2396816d-aa17-5f58-bdcf-8cf99eb79e68}");
   sceneLayer.index.label[cameraUuid] = "camera";
-  sceneLayer.add(cameraUuid);
-  CameraComponent::create(node: node, uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  node.newCameraComponent(uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -2.8, 2.05), quat(0.5373, 1.05227e-07, -6.70368e-08, 0.843391), 1);
 
 // ======== Node "light-rect" ========
   nodeUuid = Uuid<Node>("{fe1f803b-4d53-5f15-9da3-a072966e38b8}");
   sceneLayer.index.label[nodeUuid] = "light-rect";
-  sceneLayer.add(nodeUuid);
-  node = Node::create(layer: sceneLayer, uuid: nodeUuid);
+  @node = sceneLayer.newNode(uuid: nodeUuid);
   // StaticMesh "light-rect" -- (assimp index 0)
   meshUuid = Uuid<StaticMesh>("{9d313d72-0ede-55a4-b7ff-f620ee939b0d}");
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-rect";
-  sceneLayer.add(meshUuid);
-  StaticMeshComponent::create(node: node, meshUuid: meshUuid, materialUuid: materialUuid);
+  node.newStaticMeshComponent(uuid: Uuid<StaticMeshComponent>("{02183b4e-d7ae-5d79-9a98-343776fd369c}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(-0.34202, 0, 0, 0.939693), 1);
 }
