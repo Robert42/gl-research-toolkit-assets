@@ -1,12 +1,13 @@
 void loadMeshes(StaticMeshLoader@ loader)
 {
+
   // walls  -- (assimp index: 3)
-  array<uint16> indices = 
+  array<uint16> indices3 = 
   {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 2, 10, 3, 5, 11,
     6, 8
   };
-  array<float> vertexData = 
+  array<float> vertexData3 = 
   {
     -1, 1, -1, 0, -1, 0, 0.707107, 0, 0.707107, 0.25005, 0.5,
     1, 1, -1, 0, -1, 0, 0.707107, 0, 0.707107, 0.5, 0.25005,
@@ -21,44 +22,44 @@ void loadMeshes(StaticMeshLoader@ loader)
     -1, -1, -1, 0, 0, 1, 0.707107, 0.707107, 0, 0.000100064, 0.25005,
     1, -1, 1, 0, 0, -1, 0.707107, -0.707107, 0, 0.9999, 0.74995
   };
-  loader.loadStaticMesh(Uuid<StaticMesh>("{0702d587-16af-552a-983d-7418e7adae6d}"), indices, vertexData);
+  loader.loadStaticMesh(Uuid<StaticMesh>("{0702d587-16af-552a-983d-7418e7adae6d}"), indices3, vertexData3);
 
   // walls  -- (assimp index: 5)
-  indices = 
+  array<uint16> indices5 = 
   {
     0, 1, 2, 3, 0, 2
   };
-  vertexData = 
+  array<float> vertexData5 = 
   {
     1, 1, -1, -1, 0, 0, 0, -0.707107, 0.707107, 0.5, 0.25005,
     1, -1, -1, -1, 0, 0, 0, -0.707107, 0.707107, 0.74995, 9.998e-05,
     1, -1, 1, -1, 0, 0, 0, -0.707107, 0.707107, 0.9999, 0.25005,
     1, 1, 1, -1, 0, 0, 0, -0.707107, 0.707107, 0.74995, 0.5
   };
-  loader.loadStaticMesh(Uuid<StaticMesh>("{07345f84-7ae6-5558-bf7d-9aae459196f2}"), indices, vertexData);
+  loader.loadStaticMesh(Uuid<StaticMesh>("{07345f84-7ae6-5558-bf7d-9aae459196f2}"), indices5, vertexData5);
 
   // walls  -- (assimp index: 4)
-  indices = 
+  array<uint16> indices4 = 
   {
     0, 1, 2, 3, 0, 2
   };
-  vertexData = 
+  array<float> vertexData4 = 
   {
     -1, -1, -1, 1, 0, 0, 0, 0.707107, 0.707107, 9.998e-05, 0.74995,
     -1, 1, -1, 1, 0, 0, 0, 0.707107, 0.707107, 0.25005, 0.5,
     -1, 1, 1, 1, 0, 0, 0, 0.707107, 0.707107, 0.5, 0.74995,
     -1, -1, 1, 1, 0, 0, 0, 0.707107, 0.707107, 0.25005, 0.9999
   };
-  loader.loadStaticMesh(Uuid<StaticMesh>("{1d3ced89-b318-53fe-92cc-a01be9a9b434}"), indices, vertexData);
+  loader.loadStaticMesh(Uuid<StaticMesh>("{1d3ced89-b318-53fe-92cc-a01be9a9b434}"), indices4, vertexData4);
 
   // short-cube  -- (assimp index: 2)
-  indices = 
+  array<uint16> indices2 = 
   {
     0, 1, 2, 18, 0, 2, 3, 4, 5, 19, 3, 5, 6, 7, 8, 20,
     6, 8, 9, 10, 11, 21, 9, 11, 12, 13, 14, 22, 12, 14, 15, 16,
     17, 23, 15, 17
   };
-  vertexData = 
+  array<float> vertexData2 = 
   {
     -0.3, 0.3, 0.3, -1, 0, 0, 0, 1, 3.69767e-07, 0.5, 8.66661e-05,
     -0.3, 0.3, -0.3, -1, 0, 0, 0, 1, 3.97433e-07, 0.5, 0.250043,
@@ -85,16 +86,16 @@ void loadMeshes(StaticMeshLoader@ loader)
     -0.3, -0.3, -0.3, 0, 0, -1, -3.5769e-07, 1, 0, 0.250044, 0.250043,
     0.3, -0.3, 0.3, 0, 0, 1, -9.53839e-07, -1, 0, 0.999913, 0.5
   };
-  loader.loadStaticMesh(Uuid<StaticMesh>("{20c8872b-518d-5d1c-bb22-82235b1489d7}"), indices, vertexData);
+  loader.loadStaticMesh(Uuid<StaticMesh>("{20c8872b-518d-5d1c-bb22-82235b1489d7}"), indices2, vertexData2);
 
   // long-cube  -- (assimp index: 1)
-  indices = 
+  array<uint16> indices1 = 
   {
     0, 1, 2, 18, 0, 2, 3, 4, 5, 19, 3, 5, 6, 7, 8, 20,
     6, 8, 9, 10, 11, 21, 9, 11, 12, 13, 14, 22, 12, 14, 15, 16,
     17, 23, 15, 17
   };
-  vertexData = 
+  array<float> vertexData1 = 
   {
     -0.3, 0.3, 0.6, -1, 0, 0, 0, -1, 0, 0.74995, 0.74995,
     -0.3, 0.3, -0.6, -1, 0, 0, 0, -1, 0, 0.74995, 0.25005,
@@ -121,19 +122,18 @@ void loadMeshes(StaticMeshLoader@ loader)
     -0.3, -0.3, -0.6, 0, 0, -1, 0, 1, 0, 0.25005, 9.998e-05,
     0.3, -0.3, 0.6, 0, 0, 1, 0, 1, 0, 0.25005, 0.74995
   };
-  loader.loadStaticMesh(Uuid<StaticMesh>("{6d5307e4-3fe9-5542-b6a3-7685228130aa}"), indices, vertexData);
-
+  loader.loadStaticMesh(Uuid<StaticMesh>("{6d5307e4-3fe9-5542-b6a3-7685228130aa}"), indices1, vertexData1);
   // light-dummy  -- (assimp index: 0)
-  indices = 
+  array<uint16> indices0 = 
   {
     0, 1, 2, 3, 0, 2
   };
-  vertexData = 
+  array<float> vertexData0 = 
   {
     -0.235, 0.19, 0, 0, -1.6585e-07, -1, 1, 0, 0, 8.99645e-05, 8.99011e-05,
     0.235, 0.19, 0, 0, -1.6585e-07, -1, 1, 0, 0, 0.99991, 8.99011e-05,
     0.235, -0.19, 0, 0, -1.6585e-07, -1, 1, 0, 0, 0.99991, 0.808455,
     -0.235, -0.19, 0, 0, -1.6585e-07, -1, 1, 0, 0, 8.99011e-05, 0.808455
   };
-  loader.loadStaticMesh(Uuid<StaticMesh>("{bcd230bf-430f-501b-9204-741230183cca}"), indices, vertexData);
+  loader.loadStaticMesh(Uuid<StaticMesh>("{bcd230bf-430f-501b-9204-741230183cca}"), indices0, vertexData0);
 }
