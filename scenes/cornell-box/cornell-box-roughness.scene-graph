@@ -7,9 +7,9 @@ void main(SceneLayer@ sceneLayer)
 
   Node@ node;
   Uuid<Node> nodeUuid;
-  Uuid<Camera> cameraUuid;
   Uuid<LightSource> lightUuid;
   Uuid<StaticMesh> meshUuid;
+  Uuid<CameraComponent> cameraComponentUuid;
   Uuid<Material> materialUuid;
 
   loadMeshes(resourceManager.staticMeshLoader);
@@ -31,9 +31,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "debug-rect-are-light";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Camera "debug-rect-are-light"
-  cameraUuid = Uuid<Node>("{956c387f-aa14-5124-a268-3cc296716372}");
-  sceneLayer.index.label[cameraUuid] = "debug-rect-are-light";
-  node.newCameraComponent(uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  cameraComponentUuid = Uuid<CameraComponent>("{2d06addc-df1e-5c6f-9cb5-5c1b0e49defd}");
+  sceneLayer.index.label[cameraComponentUuid] = "debug-rect-are-light";
+  node.newCameraComponent(uuid: cameraComponentUuid, isMovable: false, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.30461, 0.616869, 1.16255), quat(-0.371181, -0.508291, 0.627565, 0.458287), 1);
 
 // ======== Node "mirror-roughness-0_1" ========
@@ -65,7 +65,7 @@ void main(SceneLayer@ sceneLayer)
   // Light "cornellBox-roughness-rectAreaLight"
   lightUuid = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
   sceneLayer.index.label[lightUuid] = "cornellBox-roughness-rectAreaLight";
-  node.createLightComponent(uuid: lightUuid);
+  node.newLightComponent(uuid: Uuid<LightComponent>("{398b643a-c934-5d8f-81a4-cffefb5de254}"), lightSourceUuid: lightUuid, interactivity: LightSourceInteractivity::STATIC);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(1, 0, 0, 0), 1);
 
 // ======== Node "light-sphere" ========
@@ -86,7 +86,7 @@ void main(SceneLayer@ sceneLayer)
   // Light "cornellBox-roughness-sphereAreaLight"
   lightUuid = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
   sceneLayer.index.label[lightUuid] = "cornellBox-roughness-sphereAreaLight";
-  node.createLightComponent(uuid: lightUuid);
+  node.newLightComponent(uuid: Uuid<LightComponent>("{a61e0b70-f493-5219-96d7-3a05631a6951}"), lightSourceUuid: lightUuid, interactivity: LightSourceInteractivity::STATIC);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.7, 0.5, 1.6), quat(1, 0, 0, 0), 1);
 
 // ======== Node "mirror-roughness-0_0" ========
@@ -136,7 +136,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
   sceneLayer.index.label[nodeUuid] = "Scene";
   @node = sceneLayer.newNode(uuid: nodeUuid);
-  node.newEmptyComponent(uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
+  node.newEmptyComponent(uuid: Uuid<NodeComponent>("{5b194501-54df-5976-a2ed-f15dab728ca4}"), isMovable: false);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(0.707107, -0.707107, 0, 0), 1);
 
 // ======== Node "camera" ========
@@ -144,9 +144,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "camera";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Camera "camera"
-  cameraUuid = Uuid<Node>("{2396816d-aa17-5f58-bdcf-8cf99eb79e68}");
-  sceneLayer.index.label[cameraUuid] = "camera";
-  node.newCameraComponent(uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  cameraComponentUuid = Uuid<CameraComponent>("{190998b4-6a94-5f70-b369-eb7e9cc38d6a}");
+  sceneLayer.index.label[cameraComponentUuid] = "camera";
+  node.newCameraComponent(uuid: cameraComponentUuid, isMovable: false, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -2.8, 2.05), quat(0.843391, 0.5373, 1.05227e-07, -6.70368e-08), 1);
 
 // ======== Node "light-rect" ========

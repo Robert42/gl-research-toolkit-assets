@@ -7,9 +7,9 @@ void main(SceneLayer@ sceneLayer)
 
   Node@ node;
   Uuid<Node> nodeUuid;
-  Uuid<Camera> cameraUuid;
   Uuid<LightSource> lightUuid;
   Uuid<StaticMesh> meshUuid;
+  Uuid<CameraComponent> cameraComponentUuid;
   Uuid<Material> materialUuid;
 
   loadMeshes(resourceManager.staticMeshLoader);
@@ -55,7 +55,7 @@ void main(SceneLayer@ sceneLayer)
   // Light "cornellBox-rectAreaLight"
   lightUuid = Uuid<LightSource>("{9af43699-566a-457b-904a-acbbb6f8c690}");
   sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight";
-  node.createLightComponent(uuid: lightUuid);
+  node.newLightComponent(uuid: Uuid<LightComponent>("{371ca612-3a31-5bc6-b929-23f32518dc39}"), lightSourceUuid: lightUuid, interactivity: LightSourceInteractivity::STATIC);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1.98), quat(1, 0, 0, 0), 1);
 
 // ======== Node "walls" ========
@@ -83,7 +83,7 @@ void main(SceneLayer@ sceneLayer)
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
   sceneLayer.index.label[nodeUuid] = "Scene";
   @node = sceneLayer.newNode(uuid: nodeUuid);
-  node.newEmptyComponent(uuid: "{5b194501-54df-5976-a2ed-f15dab728ca4}");
+  node.newEmptyComponent(uuid: Uuid<NodeComponent>("{5b194501-54df-5976-a2ed-f15dab728ca4}"), isMovable: false);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(0.707107, -0.707107, 0, 0), 1);
 
 // ======== Node "camera" ========
@@ -91,8 +91,8 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "camera";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Camera "camera"
-  cameraUuid = Uuid<Node>("{2396816d-aa17-5f58-bdcf-8cf99eb79e68}");
-  sceneLayer.index.label[cameraUuid] = "camera";
-  node.newCameraComponent(uuid: cameraUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  cameraComponentUuid = Uuid<CameraComponent>("{190998b4-6a94-5f70-b369-eb7e9cc38d6a}");
+  sceneLayer.index.label[cameraComponentUuid] = "camera";
+  node.newCameraComponent(uuid: cameraComponentUuid, isMovable: false, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -3.5, 1), quat(0.707107, 0.707107, 5.66265e-08, -5.66265e-08), 1);
 }
