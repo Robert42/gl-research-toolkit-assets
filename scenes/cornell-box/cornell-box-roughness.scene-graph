@@ -66,7 +66,7 @@ void main(SceneLayer@ sceneLayer)
   lightUuid = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
   sceneLayer.index.label[lightUuid] = "cornellBox-roughness-rectAreaLight";
   node.newLightComponent(uuid: Uuid<LightComponent>("{398b643a-c934-5d8f-81a4-cffefb5de254}"), lightSourceUuid: lightUuid, interactivity: LightSourceInteractivity::STATIC);
-  node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(1, 0, 0, 0), 1);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.7, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 1);
 
 // ======== Node "light-sphere" ========
   nodeUuid = Uuid<Node>("{622f23be-be81-567a-816d-49773c2c10a0}");
