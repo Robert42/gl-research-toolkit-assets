@@ -36,16 +36,10 @@ void main(ResourceIndex@ index)
   index.registerSceneFile(uuid: uuids::cornellBoxRoughnessScene,
                           file: "cornell-box-roughness.scene");
 
-  PlainColorMaterial wallPlainMaterial;
-  wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
-  wallPlainMaterial.smoothness = 0.3;
-  PlainColorMaterial lightPlainMaterial;
-  lightPlainMaterial.base_color = vec3(0);
-  lightPlainMaterial.emission = vec3(1);
-  PlainColorMaterial mirrorPlainMaterial;
-  mirrorPlainMaterial.base_color = vec3(1);
-  mirrorPlainMaterial.metal_mask = 1.0;
   
+  PlainColorMaterial wallPlainMaterial;
+  wallPlainMaterial.smoothness = 0.3;
+  wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
   index.registerMaterial(uuid: uuids::leftWall,
                          material: wallPlainMaterial);
   wallPlainMaterial.base_color = vec3(0.14, 0.45, 0.091);
@@ -55,9 +49,15 @@ void main(ResourceIndex@ index)
   index.registerMaterial(uuid: uuids::wall,
                          material: wallPlainMaterial);
                          
+  PlainColorMaterial lightPlainMaterial;
+  lightPlainMaterial.base_color = vec3(0);
+  lightPlainMaterial.emission = vec3(1);
   index.registerMaterial(uuid: uuids::lightMaterial,
                          material: lightPlainMaterial);
                          
+  PlainColorMaterial mirrorPlainMaterial;
+  mirrorPlainMaterial.base_color = vec3(1);
+  mirrorPlainMaterial.metal_mask = 1.0;
   mirrorPlainMaterial.smoothness = 1.0;
   index.registerMaterial(uuid: uuids::mirrorRoughness_00,
                          material: mirrorPlainMaterial);
