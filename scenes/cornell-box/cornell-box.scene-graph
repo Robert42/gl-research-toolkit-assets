@@ -93,6 +93,6 @@ void main(SceneLayer@ sceneLayer)
   // Camera "camera"
   cameraComponentUuid = Uuid<CameraComponent>("{190998b4-6a94-5f70-b369-eb7e9cc38d6a}");
   sceneLayer.index.label[cameraComponentUuid] = "camera";
-  node.newCameraComponent(uuid: cameraComponentUuid, isMovable: false, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  new_CameraComponent(node: @node, uuid: cameraComponentUuid, isMovable: false, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -3.5, 1), quat(0.707107, 0.707107, 5.66265e-08, -5.66265e-08), 1);
 }

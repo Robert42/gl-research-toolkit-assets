@@ -33,7 +33,7 @@ void main(SceneLayer@ sceneLayer)
   // Camera "debug-rect-are-light"
   cameraComponentUuid = Uuid<CameraComponent>("{2d06addc-df1e-5c6f-9cb5-5c1b0e49defd}");
   sceneLayer.index.label[cameraComponentUuid] = "debug-rect-are-light";
-  node.newCameraComponent(uuid: cameraComponentUuid, isMovable: false, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  new_CameraComponent(node: @node, uuid: cameraComponentUuid, isMovable: false, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.30461, 0.616869, 1.16255), quat(-0.371181, -0.508291, 0.627565, 0.458287), 1);
 
 // ======== Node "mirror-roughness-0_1" ========
@@ -146,7 +146,7 @@ void main(SceneLayer@ sceneLayer)
   // Camera "camera"
   cameraComponentUuid = Uuid<CameraComponent>("{190998b4-6a94-5f70-b369-eb7e9cc38d6a}");
   sceneLayer.index.label[cameraComponentUuid] = "camera";
-  node.newCameraComponent(uuid: cameraComponentUuid, isMovable: false, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  new_CameraComponent(node: @node, uuid: cameraComponentUuid, isMovable: false, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -2.8, 2.05), quat(0.843391, 0.5373, 1.05227e-07, -6.70368e-08), 1);
 
 // ======== Node "light-rect" ========
