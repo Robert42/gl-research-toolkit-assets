@@ -23,7 +23,7 @@ void main(SceneLayer@ sceneLayer)
   meshUuid = Uuid<StaticMesh>("{20c8872b-518d-5d1c-bb22-82235b1489d7}");
   materialUuid = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
   sceneLayer.index.label[meshUuid] = "short-cube";
-  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{16156cee-2f87-5ddf-9cb7-bd33df6a4587}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{16156cee-2f87-5ddf-9cb7-bd33df6a4587}"), meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.329001, -0.370598, 0.3), quat(0.989016, 0, 0, -0.147809), 1);
 
 // ======== Node "long-cube" ========
@@ -34,7 +34,7 @@ void main(SceneLayer@ sceneLayer)
   meshUuid = Uuid<StaticMesh>("{6d5307e4-3fe9-5542-b6a3-7685228130aa}");
   materialUuid = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
   sceneLayer.index.label[meshUuid] = "long-cube";
-  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{7c7079c6-e7ef-5905-8fa0-095e138f5fe1}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{7c7079c6-e7ef-5905-8fa0-095e138f5fe1}"), meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.338494, 0.287716, 0.6), quat(0.989016, 0, 0, 0.147809), 1);
 
 // ======== Node "light-dummy" ========
@@ -45,7 +45,7 @@ void main(SceneLayer@ sceneLayer)
   meshUuid = Uuid<StaticMesh>("{bcd230bf-430f-501b-9204-741230183cca}");
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-dummy";
-  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{e40b5e11-fc0f-5ce7-af59-f9fef6367b5b}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{e40b5e11-fc0f-5ce7-af59-f9fef6367b5b}"), meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1.98), quat(1, 0, 0, 0), 1);
 
 // ======== Node "cornellBox-rectAreaLight" ========
@@ -55,7 +55,7 @@ void main(SceneLayer@ sceneLayer)
   // Light "cornellBox-rectAreaLight"
   lightUuid = Uuid<LightSource>("{9af43699-566a-457b-904a-acbbb6f8c690}");
   sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{371ca612-3a31-5bc6-b929-23f32518dc39}"), lightSourceUuid: lightUuid, interactivity: LightSourceInteractivity::STATIC);
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{371ca612-3a31-5bc6-b929-23f32518dc39}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1.98), quat(1, 0, 0, 0), 1);
 
 // ======== Node "walls" ========
@@ -66,24 +66,24 @@ void main(SceneLayer@ sceneLayer)
   meshUuid = Uuid<StaticMesh>("{0702d587-16af-552a-983d-7418e7adae6d}");
   materialUuid = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
   sceneLayer.index.label[meshUuid] = "walls";
-  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{3c38ada5-5a51-5924-89dc-285be94a4e48}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{3c38ada5-5a51-5924-89dc-285be94a4e48}"), meshUuid: meshUuid, materialUuid: materialUuid);
   // StaticMesh "walls" -- (assimp index 5)
   meshUuid = Uuid<StaticMesh>("{07345f84-7ae6-5558-bf7d-9aae459196f2}");
   materialUuid = Uuid<Material>("{e22cb1e5-428d-4c3a-9657-41a1df21d3e4}");
   sceneLayer.index.label[meshUuid] = "walls";
-  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{4c6134ff-7645-5f80-a278-d6c702afad33}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{4c6134ff-7645-5f80-a278-d6c702afad33}"), meshUuid: meshUuid, materialUuid: materialUuid);
   // StaticMesh "walls" -- (assimp index 4)
   meshUuid = Uuid<StaticMesh>("{1d3ced89-b318-53fe-92cc-a01be9a9b434}");
   materialUuid = Uuid<Material>("{032ff6cf-dea3-4912-8aa0-eb16cc9ec774}");
   sceneLayer.index.label[meshUuid] = "walls";
-  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{eca08815-96a7-5b74-999c-489479d858ea}"), isMovable: false, meshUuid: meshUuid, materialUuid: materialUuid);
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{eca08815-96a7-5b74-999c-489479d858ea}"), meshUuid: meshUuid, materialUuid: materialUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1), quat(1, 0, 0, 0), 1);
 
 // ======== Node "Scene" ========
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
   sceneLayer.index.label[nodeUuid] = "Scene";
   @node = sceneLayer.newNode(uuid: nodeUuid);
-  new_EmptyComponent(node: @node, uuid: Uuid<NodeComponent>("{5b194501-54df-5976-a2ed-f15dab728ca4}"), isMovable: false);
+  new_EmptyComponent(node: @node, uuid: Uuid<NodeComponent>("{5b194501-54df-5976-a2ed-f15dab728ca4}"));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(0.707107, -0.707107, 0, 0), 1);
 
 // ======== Node "camera" ========
@@ -93,6 +93,6 @@ void main(SceneLayer@ sceneLayer)
   // Camera "camera"
   cameraComponentUuid = Uuid<CameraComponent>("{190998b4-6a94-5f70-b369-eb7e9cc38d6a}");
   sceneLayer.index.label[cameraComponentUuid] = "camera";
-  new_CameraComponent(node: @node, uuid: cameraComponentUuid, isMovable: false, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  new_CameraComponent(node: @node, uuid: cameraComponentUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -3.5, 1), quat(0.707107, 0.707107, 5.66265e-08, -5.66265e-08), 1);
 }
