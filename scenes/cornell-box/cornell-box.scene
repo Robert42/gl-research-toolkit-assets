@@ -3,4 +3,5 @@
 void main(Scene@ scene)
 {
   scene.loadSceneLayer(uuids::cornellBoxSceneLayer);
+  scene.addSceneLayer_debugCamera();
 }
