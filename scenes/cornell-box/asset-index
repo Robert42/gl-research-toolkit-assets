@@ -14,6 +14,9 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['wall'] = uuids::wall;
   importSettings.materialUuids['light'] = uuids::lightMaterial;
   
+  importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox_camera;
+  importSettings.cameraUuids['camera-mirrors'] = uuids::cornellBox_cameraMirrors;
+  
   importSettings.lightUuids['cornellBox-rectAreaLight'] = uuids::cornellBox_rectAreaLight;
   importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = uuids::cornellBox_roughness_rectAreaLight;
   importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = uuids::cornellBox_roughness_sphereAreaLight;

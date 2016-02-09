@@ -14,6 +14,8 @@ Uuid<LightSource> cornellBox_rectAreaLight = Uuid<LightSource>("{9af43699-566a-4
 Uuid<LightSource> cornellBox_roughness_sphereAreaLight = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
 Uuid<LightSource> cornellBox_roughness_rectAreaLight = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
 
+Uuid<CameraComponent> cornellBox_camera = Uuid<CameraComponent>("{5c753337-6678-43ed-8a94-6182d2e42dbd}");
+Uuid<CameraComponent> cornellBox_cameraMirrors = Uuid<CameraComponent>("{1ec1058d-9913-4035-8ef4-9915e95acb3c}");
 
 Uuid<SceneLayer> cornellBox_Empty_SceneLayer = Uuid<SceneLayer>("{4f9de818-170e-4533-b4e6-cb7fedc1e6bd}");
 Uuid<SceneLayer> cornellBox_DemoCubes_SceneLayer = Uuid<SceneLayer>("{8ed752b6-758a-491e-8f39-f7cb12a3a154}");

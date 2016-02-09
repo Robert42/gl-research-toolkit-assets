@@ -64,7 +64,7 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "camera-mirrors";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Camera "camera-mirrors"
-  cameraComponentUuid = Uuid<CameraComponent>("{9f076b54-6f74-5f4c-88d2-c9044f4e1203}");
+  cameraComponentUuid = Uuid<CameraComponent>("{79f524e6-1279-511e-a88e-3bf208761e83}");
   sceneLayer.index.label[cameraComponentUuid] = "camera-mirrors";
   new_CameraComponent(node: @node, uuid: cameraComponentUuid, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
   node.rootComponent.localTransformation = CoordFrame(vec3(0, -2.8, 2.05), quat(0.843391, 0.5373, 1.05227e-07, -6.70368e-08), 1);
