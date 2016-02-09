@@ -1,0 +1,11 @@
+#include "uuids.as"
+
+void main(Scene@ scene)
+{
+  scene.loadSceneLayer(uuids::cornellBox_Empty_SceneLayer);
+  scene.loadSceneLayer(uuids::cornellBox_LightTest_SphereSizes_SceneLayer);
+  scene.loadSceneLayer(uuids::cornellBox_RoughnessTestMirrors_SceneLayer);
+  scene.addSceneLayer_debugCamera();
+  
+  scene.camera[CameraSlot::MAIN_CAMERA] = uuids::cornellBox_cameraMirrors;
+}

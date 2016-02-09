@@ -13,6 +13,18 @@ Uuid<Material> lightMaterial = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856da
 Uuid<LightSource> cornellBox_rectAreaLight = Uuid<LightSource>("{9af43699-566a-457b-904a-acbbb6f8c690}");
 Uuid<LightSource> cornellBox_roughness_sphereAreaLight = Uuid<LightSource>("{c98f90b2-f0ec-47b8-8448-ee32625a4160}");
 Uuid<LightSource> cornellBox_roughness_rectAreaLight = Uuid<LightSource>("{45ce7810-2d26-4ba0-9312-757117d58223}");
+Uuid<LightSource> cornellBox_sphereAreaLight_01 = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
+Uuid<LightSource> cornellBox_sphereAreaLight_05 = Uuid<LightSource>("{59f633a0-442f-428a-a255-495a6040d967}");
+Uuid<LightSource> cornellBox_sphereAreaLight_10 = Uuid<LightSource>("{4100b95e-c41d-41d3-991b-ee3c093944ef}");
+Uuid<LightSource> cornellBox_sphereAreaLight_25 = Uuid<LightSource>("{68e0a764-bb89-4f32-a0ca-93828c1894aa}");
+Uuid<LightSource> cornellBox_sphereAreaLight_30 = Uuid<LightSource>("{03e51692-53b6-41b6-a9b9-b74252f26478}");
+Uuid<LightSource> cornellBox_sphereAreaLight_50 = Uuid<LightSource>("{9db8478d-0856-4066-bbcf-fd756efe2a68}");
+Uuid<LightSource> cornellBox_rectAreaLight_01 = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
+Uuid<LightSource> cornellBox_rectAreaLight_02 = Uuid<LightSource>("{ae5213f5-abdb-4034-9b33-9373eb9986a4}");
+Uuid<LightSource> cornellBox_rectAreaLight_05 = Uuid<LightSource>("{7ec99486-64f6-4ed4-bfcc-6d07f0080f9d}");
+Uuid<LightSource> cornellBox_rectAreaLight_10 = Uuid<LightSource>("{99c4eb88-a0b4-483c-8c2b-aee1a2e160e4}");
+Uuid<LightSource> cornellBox_rectAreaLight_20 = Uuid<LightSource>("{9e5610f1-968a-45de-a6a6-aad3038c7016}");
+Uuid<LightSource> cornellBox_rectAreaLight_30 = Uuid<LightSource>("{942e56a6-9f0d-4007-9bec-e72c63ce3aea}");
 
 Uuid<CameraComponent> cornellBox_camera = Uuid<CameraComponent>("{5c753337-6678-43ed-8a94-6182d2e42dbd}");
 Uuid<CameraComponent> cornellBox_cameraMirrors = Uuid<CameraComponent>("{1ec1058d-9913-4035-8ef4-9915e95acb3c}");
@@ -22,8 +34,13 @@ Uuid<SceneLayer> cornellBox_DemoCubes_SceneLayer = Uuid<SceneLayer>("{8ed752b6-7
 Uuid<SceneLayer> cornellBox_DefaultLight_SceneLayer = Uuid<SceneLayer>("{dcf17706-7103-462d-82f8-abeadaf0d4be}");
 Uuid<SceneLayer> cornellBox_RoughnessTestLights_SceneLayer = Uuid<SceneLayer>("{ef1b2d04-c51a-4dc5-b36a-58a6ee59a21f}");
 Uuid<SceneLayer> cornellBox_RoughnessTestMirrors_SceneLayer = Uuid<SceneLayer>("{87e6d354-8718-4945-839c-31edb6362878}");
+Uuid<SceneLayer> cornellBox_LightTest_SphereSizes_SceneLayer = Uuid<SceneLayer>("{7c87b87f-6b65-42e1-a052-3c77f67d9640}");
+Uuid<SceneLayer> cornellBox_LightTest_RectSizes_SceneLayer = Uuid<SceneLayer>("{168466a8-0e2f-4e85-84b9-cd16d6c48b42}");
+
 
 Uuid<Scene> cornellBoxScene = Uuid<Scene>("{158da3d3-ef79-4895-add4-f2fe22c0dbff}");
 Uuid<Scene> cornellBoxRoughnessScene = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
+Uuid<Scene> cornellBoxSphereSizesScene = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab90}");
+Uuid<Scene> cornellBoxRectSizesScene = Uuid<Scene>("{cd03b6ef-cd02-4d34-a19a-d0cd86c5ed78}");
 
 } // namespace namespace uuids
