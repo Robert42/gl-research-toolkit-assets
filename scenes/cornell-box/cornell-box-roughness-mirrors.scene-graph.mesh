@@ -1,0 +1,16 @@
+void loadMeshes(StaticMeshLoader@ loader)
+{
+  // mirror  -- (assimp index: 0)
+  array<uint16> indices0 = 
+  {
+    0, 1, 2, 3, 0, 2
+  };
+  array<float> vertexData0 = 
+  {
+    0.9, -0.138893, 0, 0, 0, 1, 1, 9.20725e-08, 0, 0.999961, 3.93806e-05,
+    0.9, 0.138893, 0, 0, 0, 1, 1, 1.87764e-07, 0, 0.999961, 0.154353,
+    -0.9, 0.138893, 0, 0, 0, 1, 1, 9.20725e-08, 0, 3.92813e-05, 0.154353,
+    -0.9, -0.138893, 0, 0, 0, 1, 1, -9.93098e-08, 0, 3.92813e-05, 3.92813e-05
+  };
+  loader.loadStaticMesh(Uuid<StaticMesh>("{d591d07a-0748-5649-a8f3-6b82b7339664}"), indices0, vertexData0);
+}

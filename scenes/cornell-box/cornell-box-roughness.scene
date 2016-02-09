@@ -2,6 +2,8 @@
 
 void main(Scene@ scene)
 {
-  scene.loadSceneLayer(uuids::cornellBoxRoughnessSceneLayer);
+  scene.loadSceneLayer(uuids::cornellBox_Empty_SceneLayer);
+  scene.loadSceneLayer(uuids::cornellBox_RoughnessTestLights_SceneLayer);
+  scene.loadSceneLayer(uuids::cornellBox_RoughnessTestMirrors_SceneLayer);
   scene.addSceneLayer_debugCamera();
 }

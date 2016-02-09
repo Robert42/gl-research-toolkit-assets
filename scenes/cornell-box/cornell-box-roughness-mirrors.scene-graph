@@ -1,0 +1,89 @@
+#include "cornell-box-roughness-mirrors.scene-graph.mesh"
+
+void main(SceneLayer@ sceneLayer)
+{
+
+  ResourceManager@ resourceManager = sceneLayer.scene.resourceManager;
+
+  Node@ node;
+  Uuid<Node> nodeUuid;
+  Uuid<LightSource> lightUuid;
+  Uuid<StaticMesh> meshUuid;
+  Uuid<CameraComponent> cameraComponentUuid;
+  Uuid<Material> materialUuid;
+
+  loadMeshes(resourceManager.staticMeshLoader);
+
+
+// ======== Node "mirror-roughness-0_4" ========
+  nodeUuid = Uuid<Node>("{0be7a355-b8d1-545a-88c7-5af0dec9beca}");
+  sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_4";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // StaticMesh "mirror" -- (assimp index 4)
+  meshUuid = Uuid<StaticMesh>("{d591d07a-0748-5649-a8f3-6b82b7339664}");
+  materialUuid = Uuid<Material>("{173f0093-02b2-4703-9146-2bc310fc780f}");
+  sceneLayer.index.label[meshUuid] = "mirror";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{9ea3a498-98f6-5ab0-b0ca-d0cc888a2901}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0.447068, 0.376232), quat(0.963973, 0.266002, 0, 0), 1);
+
+// ======== Node "mirror-roughness-0_1" ========
+  nodeUuid = Uuid<Node>("{1b4a550b-1bce-52e0-b658-5412e3b5053e}");
+  sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_1";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // StaticMesh "mirror" -- (assimp index 1)
+  meshUuid = Uuid<StaticMesh>("{d591d07a-0748-5649-a8f3-6b82b7339664}");
+  materialUuid = Uuid<Material>("{bf1f0442-91f0-4a5a-9b77-08e853dee247}");
+  sceneLayer.index.label[meshUuid] = "mirror";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{65df7aad-76e9-5b45-8720-e2c3788c509b}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.562446, 0.376232), quat(0.998673, 0.0515086, 0, 0), 1);
+
+// ======== Node "mirror-roughness-0_2" ========
+  nodeUuid = Uuid<Node>("{2f86f22f-8f6c-5b02-9a87-5608bf7d9406}");
+  sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_2";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // StaticMesh "mirror" -- (assimp index 2)
+  meshUuid = Uuid<StaticMesh>("{d591d07a-0748-5649-a8f3-6b82b7339664}");
+  materialUuid = Uuid<Material>("{c12d56be-680d-4a7b-8e3a-0239332f8489}");
+  sceneLayer.index.label[meshUuid] = "mirror";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{948499e0-64e3-5373-9913-50e7a40755bd}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.24037, 0.376232), quat(0.993813, 0.111068, 0, 0), 1);
+
+// ======== Node "mirror-roughness-0_0" ========
+  nodeUuid = Uuid<Node>("{87059266-2203-537a-8607-a6b52cb6b638}");
+  sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_0";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // StaticMesh "mirror" -- (assimp index 0)
+  meshUuid = Uuid<StaticMesh>("{d591d07a-0748-5649-a8f3-6b82b7339664}");
+  materialUuid = Uuid<Material>("{61c8077c-ea53-4a3d-9589-a90935cd72e9}");
+  sceneLayer.index.label[meshUuid] = "mirror";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{f4ecb6c3-b741-58c4-b944-a39633c189eb}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -0.874809, 0.376232), quat(1, 6.12175e-05, 0, 0), 1);
+
+// ======== Node "camera-mirrors" ========
+  nodeUuid = Uuid<Node>("{ab6f46bb-f393-539a-9153-d2616a52bac3}");
+  sceneLayer.index.label[nodeUuid] = "camera-mirrors";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // Camera "camera-mirrors"
+  cameraComponentUuid = Uuid<CameraComponent>("{9f076b54-6f74-5f4c-88d2-c9044f4e1203}");
+  sceneLayer.index.label[cameraComponentUuid] = "camera-mirrors";
+  new_CameraComponent(node: @node, uuid: cameraComponentUuid, aspect: 1.33333, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -2.8, 2.05), quat(0.843391, 0.5373, 1.05227e-07, -6.70368e-08), 1);
+
+// ======== Node "mirror-roughness-0_3" ========
+  nodeUuid = Uuid<Node>("{c5decb95-6365-5a05-89e0-b227826175bc}");
+  sceneLayer.index.label[nodeUuid] = "mirror-roughness-0_3";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // StaticMesh "mirror" -- (assimp index 3)
+  meshUuid = Uuid<StaticMesh>("{d591d07a-0748-5649-a8f3-6b82b7339664}");
+  materialUuid = Uuid<Material>("{b56e290f-c3c6-40da-9f2f-c9a5df55495f}");
+  sceneLayer.index.label[meshUuid] = "mirror";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{07e01620-a877-5092-868d-5702792f95bf}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0.102829, 0.376232), quat(0.982999, 0.183609, 0, 0), 1);
+
+// ======== Node "Scene" ========
+  nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
+  sceneLayer.index.label[nodeUuid] = "Scene";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  new_EmptyComponent(node: @node, uuid: Uuid<NodeComponent>("{5b194501-54df-5976-a2ed-f15dab728ca4}"));
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(0.707107, -0.707107, 0, 0), 1);
+}

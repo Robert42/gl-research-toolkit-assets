@@ -1,0 +1,55 @@
+#include "cornell-box-empty.scene-graph.mesh"
+
+void main(SceneLayer@ sceneLayer)
+{
+
+  ResourceManager@ resourceManager = sceneLayer.scene.resourceManager;
+
+  Node@ node;
+  Uuid<Node> nodeUuid;
+  Uuid<LightSource> lightUuid;
+  Uuid<StaticMesh> meshUuid;
+  Uuid<CameraComponent> cameraComponentUuid;
+  Uuid<Material> materialUuid;
+
+  loadMeshes(resourceManager.staticMeshLoader);
+
+
+// ======== Node "walls" ========
+  nodeUuid = Uuid<Node>("{dbb5b14b-dbe8-5650-b5fc-3387c149a6e0}");
+  sceneLayer.index.label[nodeUuid] = "walls";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // StaticMesh "walls" -- (assimp index 1)
+  meshUuid = Uuid<StaticMesh>("{41f3c33b-102e-5bc6-bd01-d9a4973b9f66}");
+  materialUuid = Uuid<Material>("{032ff6cf-dea3-4912-8aa0-eb16cc9ec774}");
+  sceneLayer.index.label[meshUuid] = "walls";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{edcf8f3d-e1eb-5aac-961b-c2a956afaba1}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  // StaticMesh "walls" -- (assimp index 2)
+  meshUuid = Uuid<StaticMesh>("{6b19d32f-a46f-5284-bba0-26e33bd3b086}");
+  materialUuid = Uuid<Material>("{e22cb1e5-428d-4c3a-9657-41a1df21d3e4}");
+  sceneLayer.index.label[meshUuid] = "walls";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{1a326329-1a72-501e-b55d-f4d3cb18c183}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  // StaticMesh "walls" -- (assimp index 0)
+  meshUuid = Uuid<StaticMesh>("{70c219bd-6c43-5901-9815-0f7402c876e6}");
+  materialUuid = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
+  sceneLayer.index.label[meshUuid] = "walls";
+  new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{3148169c-0a37-5b87-a3f2-bc30d7fc66fc}"), meshUuid: meshUuid, materialUuid: materialUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 1), quat(1, 0, 0, 0), 1);
+
+// ======== Node "Scene" ========
+  nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
+  sceneLayer.index.label[nodeUuid] = "Scene";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  new_EmptyComponent(node: @node, uuid: Uuid<NodeComponent>("{5b194501-54df-5976-a2ed-f15dab728ca4}"));
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, 0, 0), quat(0.707107, -0.707107, 0, 0), 1);
+
+// ======== Node "camera" ========
+  nodeUuid = Uuid<Node>("{ed3c23d6-615c-5b4d-b07d-a5f5f8165446}");
+  sceneLayer.index.label[nodeUuid] = "camera";
+  @node = sceneLayer.newNode(uuid: nodeUuid);
+  // Camera "camera"
+  cameraComponentUuid = Uuid<CameraComponent>("{190998b4-6a94-5f70-b369-eb7e9cc38d6a}");
+  sceneLayer.index.label[cameraComponentUuid] = "camera";
+  new_CameraComponent(node: @node, uuid: cameraComponentUuid, aspect: 1, clipFar: 100, clipNear: 0.1, horizontal_fov: 0.857556, lookAt: vec3(0, 0, -1), upVector: vec3(0, 1, 0), position: vec3(0, 0, 0));
+  node.rootComponent.localTransformation = CoordFrame(vec3(0, -3.5, 1), quat(0.707107, 0.707107, 5.66265e-08, -5.66265e-08), 1);
+}

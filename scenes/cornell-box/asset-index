@@ -18,18 +18,38 @@ void main(ResourceIndex@ index)
   importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = uuids::cornellBox_roughness_rectAreaLight;
   importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = uuids::cornellBox_roughness_sphereAreaLight;
 
-  index.convertSceneGraph(sceneGraphFile: "cornell-box.scene-graph",
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-empty.scene-graph",
                           sourceFile: "cornell-box.blend",
+                          groupToImport: "empty-box",
+                          settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-demo-cubes.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          groupToImport: "cubes",
+                          settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-default-light.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          groupToImport: "default-light",
                           settings: importSettings);
 
-  index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness.scene-graph",
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness-lights.scene-graph",
                           sourceFile: "cornell-box-roughness.blend",
+                          groupToImport: "roughness-lights",
+                          settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness-mirrors.scene-graph",
+                          sourceFile: "cornell-box-roughness.blend",
+                          groupToImport: "roughness-mirrors",
                           settings: importSettings);
                           
-  index.registerSceneLayerFile(uuid: uuids::cornellBoxSceneLayer,
-                               file: "cornell-box.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBoxRoughnessSceneLayer,
-                               file: "cornell-box-roughness.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox_Empty_SceneLayer,
+                               file: "cornell-box-empty.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox_DemoCubes_SceneLayer,
+                               file: "cornell-box-demo-cubes.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox_DefaultLight_SceneLayer,
+                               file: "cornell-box-default-light.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox_RoughnessTestLights_SceneLayer,
+                               file: "cornell-box-roughness-lights.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox_RoughnessTestMirrors_SceneLayer,
+                               file: "cornell-box-roughness-mirrors.scene-layer");
                                
   index.registerSceneFile(uuid: uuids::cornellBoxScene,
                           file: "cornell-box.scene");
