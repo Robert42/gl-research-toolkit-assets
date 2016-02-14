@@ -61,7 +61,7 @@ void main(ResourceIndex@ index)
                           settings: importSettings);
   index.convertSceneGraph(sceneGraphFile: "cornell-box-rect-sizes.scene-graph",
                           sourceFile: "cornell-box-light-sources.blend",
-                          groupToImport: "sphere-area-light-sizes",
+                          groupToImport: "rect-area-light-sizes",
                           settings: importSettings);
                           
   index.registerSceneLayerFile(uuid: uuids::cornellBox_Empty_SceneLayer,
@@ -140,42 +140,33 @@ void main(ResourceIndex@ index)
   index.registerLightSource(uuid: uuids::cornellBox_roughness_sphereAreaLight,
                             light: sphereAreaLight);
                             
-  sphereAreaLight.radius = 0.01;
+  sphereAreaLight.radius = 0.5;
+  sphereAreaLight.luminous_power *= 0.1;
   index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_01,
                             light: sphereAreaLight);
-  sphereAreaLight.radius = 0.05;
   index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_05,
                             light: sphereAreaLight);
-  sphereAreaLight.radius = 0.1;
   index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_10,
                             light: sphereAreaLight);
-  sphereAreaLight.radius = 0.25;
   index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_25,
                             light: sphereAreaLight);
-  sphereAreaLight.radius = 0.30;
   index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_30,
                             light: sphereAreaLight);
-  sphereAreaLight.radius = 0.50;
   index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_50,
                             light: sphereAreaLight);
                             
 
-  rectAreaLight.size = vec2(0.01);
+  rectAreaLight.size = vec2(1);
   index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_01,
                             light: rectAreaLight);
-  rectAreaLight.size = vec2(0.02);
   index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_02,
                             light: rectAreaLight);
-  rectAreaLight.size = vec2(0.05);
   index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_05,
                             light: rectAreaLight);
-  rectAreaLight.size = vec2(0.1);
   index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_10,
                             light: rectAreaLight);
-  rectAreaLight.size = vec2(0.2);
   index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_20,
                             light: rectAreaLight);
-  rectAreaLight.size = vec2(0.3);
   index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_30,
                             light: rectAreaLight);
 }
