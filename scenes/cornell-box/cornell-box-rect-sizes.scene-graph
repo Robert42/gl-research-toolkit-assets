@@ -32,7 +32,7 @@ void main(SceneLayer@ sceneLayer)
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-rectAreaLight-01"
   lightUuid = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-01";
+  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-30";
   new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{51da1b97-41ec-50d2-8f6e-7826dfc20e28}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.943766, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 0.01);
 
@@ -52,9 +52,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "cornellBox-rectAreaLight-02";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-rectAreaLight-02"
-  lightUuid = Uuid<LightSource>("{ae5213f5-abdb-4034-9b33-9373eb9986a4}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-02";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{6a713da6-d571-58d4-a0a7-9d60aa94c52c}"), lightSourceUuid: lightUuid);
+  lightUuid = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-30";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{dca7a727-7dc7-571b-82c8-3ae5f341e7a7}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.686365, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 0.02);
 
 // ======== Node "light-rect_05" ========
@@ -73,9 +73,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "cornellBox-rectAreaLight-10";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-rectAreaLight-10"
-  lightUuid = Uuid<LightSource>("{99c4eb88-a0b4-483c-8c2b-aee1a2e160e4}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-10";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{d62b2905-566f-501c-a83e-5247d98f5e8a}"), lightSourceUuid: lightUuid);
+  lightUuid = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-30";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{804af817-eb1c-57cc-af39-72e4552b1383}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.103964, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 0.1);
 
 // ======== Node "cornellBox-rectAreaLight-30" ========
@@ -83,9 +83,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "cornellBox-rectAreaLight-30";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-rectAreaLight-30"
-  lightUuid = Uuid<LightSource>("{942e56a6-9f0d-4007-9bec-e72c63ce3aea}");
+  lightUuid = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
   sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-30";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{83829dc0-ac0e-5a83-98ab-c6ff579f6612}"), lightSourceUuid: lightUuid);
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{f08da2d9-22b5-5e5d-98ae-928114cf616e}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.7953, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 0.3);
 
 // ======== Node "light-rect_01" ========
@@ -104,9 +104,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "cornellBox-rectAreaLight-20";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-rectAreaLight-20"
-  lightUuid = Uuid<LightSource>("{9e5610f1-968a-45de-a6a6-aad3038c7016}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-20";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{f3321dec-f259-5b8e-84b1-1f78de81a2a9}"), lightSourceUuid: lightUuid);
+  lightUuid = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-30";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{c0616252-9c68-5887-82e7-6284c04b8f8b}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(0.295844, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 0.2);
 
 // ======== Node "light-rect_10" ========
@@ -125,9 +125,9 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "cornellBox-rectAreaLight-05";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-rectAreaLight-05"
-  lightUuid = Uuid<LightSource>("{7ec99486-64f6-4ed4-bfcc-6d07f0080f9d}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-05";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{94eddea0-80d0-5501-b916-a4a7caad6787}"), lightSourceUuid: lightUuid);
+  lightUuid = Uuid<LightSource>("{995d80bc-a6ec-4853-909d-6be8fe88de05}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-rectAreaLight-30";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{a3a30d7b-24a0-5b20-a86b-b226ea2a47e7}"), lightSourceUuid: lightUuid);
   node.rootComponent.localTransformation = CoordFrame(vec3(-0.411057, 0.5, 1.6), quat(0.939693, -0.34202, 0, 0), 0.05);
 
 // ======== Node "light-rect_02" ========

@@ -24,17 +24,17 @@ void main(SceneLayer@ sceneLayer)
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
   new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{7b2aa8bc-1c46-58fd-9527-5de7286b78d2}"), meshUuid: meshUuid, materialUuid: materialUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.816277, 0.5, 1.6), quat(1, 0, 0, 0), 0.05);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.816277, 0.5, 1.6), quat(1, 0, 0, 0), 0.025);
 
 // ======== Node "cornellBox-sphereAreaLight-05" ========
   nodeUuid = Uuid<Node>("{1c445618-ee6f-553f-9d3e-ee95752d92b2}");
   sceneLayer.index.label[nodeUuid] = "cornellBox-sphereAreaLight-05";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-sphereAreaLight-05"
-  lightUuid = Uuid<LightSource>("{59f633a0-442f-428a-a255-495a6040d967}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-05";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{38880a9d-7b6e-5263-bd14-7f65411ca0df}"), lightSourceUuid: lightUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.816277, 0.5, 1.6), quat(1, 0, 0, 0), 0.05);
+  lightUuid = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-50";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{f64ac431-3bd6-50c3-9120-275f6711fa51}"), lightSourceUuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.816277, 0.5, 1.6), quat(1, 0, 0, 0), 0.025);
 
 // ======== Node "light-sphere_1" ========
   nodeUuid = Uuid<Node>("{26bf8509-2a35-5075-8924-b77efdeb3a14}");
@@ -45,7 +45,7 @@ void main(SceneLayer@ sceneLayer)
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
   new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{4e16ef32-dacb-5790-b082-5c9608750d76}"), meshUuid: meshUuid, materialUuid: materialUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.63229, 0.5, 1.6), quat(1, 0, 0, 0), 0.1);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.63229, 0.5, 1.6), quat(1, 0, 0, 0), 0.05);
 
 // ======== Node "light-sphere_25" ========
   nodeUuid = Uuid<Node>("{42742925-0bd3-5fa1-b25a-c64b10c71870}");
@@ -56,7 +56,7 @@ void main(SceneLayer@ sceneLayer)
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
   new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{90aa9d2b-bfe6-58e7-a81e-9846841d40f0}"), meshUuid: meshUuid, materialUuid: materialUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.286685, 0.5, 1.6), quat(1, 0, 0, 0), 0.25);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.286685, 0.5, 1.6), quat(1, 0, 0, 0), 0.125);
 
 // ======== Node "light-sphere_01" ========
   nodeUuid = Uuid<Node>("{592bb7be-eefc-5e62-8c5b-23768371a91c}");
@@ -67,7 +67,7 @@ void main(SceneLayer@ sceneLayer)
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
   new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{eb4920e0-553d-5f00-86e6-269dd92b0677}"), meshUuid: meshUuid, materialUuid: materialUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.939715, 0.494123, 1.60139), quat(1, 0, 0, 0), 0.01);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.939715, 0.494123, 1.60139), quat(1, 0, 0, 0), 0.005);
 
 // ======== Node "light-sphere_5" ========
   nodeUuid = Uuid<Node>("{a2dbc245-37d9-5960-b948-36715ba35904}");
@@ -78,27 +78,27 @@ void main(SceneLayer@ sceneLayer)
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
   new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{9ece68f2-9392-5e8f-8b0f-f1b06bca5a85}"), meshUuid: meshUuid, materialUuid: materialUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(0.671708, 0.5, 1.6), quat(1, 0, 0, 0), 0.5);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.671708, 0.5, 1.6), quat(1, 0, 0, 0), 0.25);
 
 // ======== Node "cornellBox-sphereAreaLight-50" ========
   nodeUuid = Uuid<Node>("{b25c656e-9d9b-5c00-a044-645e67a62130}");
   sceneLayer.index.label[nodeUuid] = "cornellBox-sphereAreaLight-50";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-sphereAreaLight-50"
-  lightUuid = Uuid<LightSource>("{9db8478d-0856-4066-bbcf-fd756efe2a68}");
+  lightUuid = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
   sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-50";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{53742fe5-5ebf-5d74-a8f8-cb9c5754e55a}"), lightSourceUuid: lightUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(0.671708, 0.5, 1.6), quat(1, 0, 0, 0), 0.5);
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{e1039823-1cf1-5d04-afe9-4452608e7e85}"), lightSourceUuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.671708, 0.5, 1.6), quat(1, 0, 0, 0), 0.25);
 
 // ======== Node "cornellBox-sphereAreaLight-25" ========
   nodeUuid = Uuid<Node>("{c4732cc2-7e32-5f93-963f-2af823fbc4f4}");
   sceneLayer.index.label[nodeUuid] = "cornellBox-sphereAreaLight-25";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-sphereAreaLight-25"
-  lightUuid = Uuid<LightSource>("{68e0a764-bb89-4f32-a0ca-93828c1894aa}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-25";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{c16a81e2-f130-5c06-ad5f-032186290863}"), lightSourceUuid: lightUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.286685, 0.5, 1.6), quat(1, 0, 0, 0), 0.25);
+  lightUuid = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-50";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{83e6fb54-264e-57a3-9e5e-a0a1bc0f0411}"), lightSourceUuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.286685, 0.5, 1.6), quat(1, 0, 0, 0), 0.125);
 
 // ======== Node "light-sphere_3" ========
   nodeUuid = Uuid<Node>("{c521aca0-4927-572d-8960-ee6279d2e8b7}");
@@ -109,17 +109,17 @@ void main(SceneLayer@ sceneLayer)
   materialUuid = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
   sceneLayer.index.label[meshUuid] = "light-sphere";
   new_StaticMeshComponent(node: @node, uuid: Uuid<StaticMeshComponent>("{a639dc05-62bc-5da7-b499-386488cce089}"), meshUuid: meshUuid, materialUuid: materialUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(0.148454, 0.5, 1.6), quat(1, 0, 0, 0), 0.3);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.148454, 0.5, 1.6), quat(1, 0, 0, 0), 0.15);
 
 // ======== Node "cornellBox-sphereAreaLight-30" ========
   nodeUuid = Uuid<Node>("{c84bd309-a947-5c24-94ad-de1351198392}");
   sceneLayer.index.label[nodeUuid] = "cornellBox-sphereAreaLight-30";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-sphereAreaLight-30"
-  lightUuid = Uuid<LightSource>("{03e51692-53b6-41b6-a9b9-b74252f26478}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-30";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{d2152ac9-113c-50ee-ba17-ad0a598ccd76}"), lightSourceUuid: lightUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(0.148454, 0.5, 1.6), quat(1, 0, 0, 0), 0.3);
+  lightUuid = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-50";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{e18be455-3cd3-5a1c-95b6-34fea2f923eb}"), lightSourceUuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(0.148454, 0.5, 1.6), quat(1, 0, 0, 0), 0.15);
 
 // ======== Node "cornellBox-sphereAreaLight-01" ========
   nodeUuid = Uuid<Node>("{cacbd22a-9e6c-5539-a467-06b02506f1d3}");
@@ -127,9 +127,9 @@ void main(SceneLayer@ sceneLayer)
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-sphereAreaLight-01"
   lightUuid = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-01";
+  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-50";
   new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{7d748aa1-74fa-5e72-9ae2-274a44159861}"), lightSourceUuid: lightUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.939715, 0.494123, 1.60139), quat(1, 0, 0, 0), 0.01);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.939715, 0.494123, 1.60139), quat(1, 0, 0, 0), 0.005);
 
 // ======== Node "Scene" ========
   nodeUuid = Uuid<Node>("{e0448c15-70f8-54cf-bded-d272bedcc33b}");
@@ -143,8 +143,8 @@ void main(SceneLayer@ sceneLayer)
   sceneLayer.index.label[nodeUuid] = "cornellBox-sphereAreaLight-10";
   @node = sceneLayer.newNode(uuid: nodeUuid);
   // Light "cornellBox-sphereAreaLight-10"
-  lightUuid = Uuid<LightSource>("{4100b95e-c41d-41d3-991b-ee3c093944ef}");
-  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-10";
-  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{7909caa6-5e2a-5e55-9783-289aa1ec1f88}"), lightSourceUuid: lightUuid);
-  node.rootComponent.localTransformation = CoordFrame(vec3(-0.63229, 0.5, 1.6), quat(1, 0, 0, 0), 0.1);
+  lightUuid = Uuid<LightSource>("{d80efa03-3a11-4797-b70b-e7b1daf1832d}");
+  sceneLayer.index.label[lightUuid] = "cornellBox-sphereAreaLight-50";
+  new_LightComponent(node: @node, uuid: Uuid<LightComponent>("{d9e5d6cf-4b77-5ce1-8c27-19b6d66d1c64}"), lightSourceUuid: lightUuid);
+  node.rootComponent.localTransformation = CoordFrame(vec3(-0.63229, 0.5, 1.6), quat(1, 0, 0, 0), 0.05);
 }

@@ -21,18 +21,18 @@ void main(ResourceIndex@ index)
   importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = uuids::cornellBox_roughness_rectAreaLight;
   importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = uuids::cornellBox_roughness_sphereAreaLight;
   
-  importSettings.lightUuids['cornellBox-sphereAreaLight-01'] = uuids::cornellBox_sphereAreaLight_01;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-05'] = uuids::cornellBox_sphereAreaLight_05;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-10']  = uuids::cornellBox_sphereAreaLight_10;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-25'] = uuids::cornellBox_sphereAreaLight_25;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-30']  = uuids::cornellBox_sphereAreaLight_30;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-50']  = uuids::cornellBox_sphereAreaLight_50;
-  importSettings.lightUuids['cornellBox-rectAreaLight-01'] = uuids::cornellBox_rectAreaLight_01;
-  importSettings.lightUuids['cornellBox-rectAreaLight-02'] = uuids::cornellBox_rectAreaLight_02;
-  importSettings.lightUuids['cornellBox-rectAreaLight-05'] = uuids::cornellBox_rectAreaLight_05;
-  importSettings.lightUuids['cornellBox-rectAreaLight-10'] = uuids::cornellBox_rectAreaLight_10;
-  importSettings.lightUuids['cornellBox-rectAreaLight-20'] = uuids::cornellBox_rectAreaLight_20;
-  importSettings.lightUuids['cornellBox-rectAreaLight-30'] = uuids::cornellBox_rectAreaLight_30;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-01'] = uuids::cornellBox_sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-05'] = uuids::cornellBox_sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-10']  = uuids::cornellBox_sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-25'] = uuids::cornellBox_sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-30']  = uuids::cornellBox_sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-50']  = uuids::cornellBox_sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-01'] = uuids::cornellBox_rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-02'] = uuids::cornellBox_rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-05'] = uuids::cornellBox_rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-10'] = uuids::cornellBox_rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-20'] = uuids::cornellBox_rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-30'] = uuids::cornellBox_rectAreaLight_radius1;
 
   index.convertSceneGraph(sceneGraphFile: "cornell-box-empty.scene-graph",
                           sourceFile: "cornell-box.blend",
@@ -140,33 +140,13 @@ void main(ResourceIndex@ index)
   index.registerLightSource(uuid: uuids::cornellBox_roughness_sphereAreaLight,
                             light: sphereAreaLight);
                             
-  sphereAreaLight.radius = 0.5;
+  sphereAreaLight.radius = 1.0;
   sphereAreaLight.luminous_power *= 0.1;
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_01,
-                            light: sphereAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_05,
-                            light: sphereAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_10,
-                            light: sphereAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_25,
-                            light: sphereAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_30,
-                            light: sphereAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_50,
+  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_radius1,
                             light: sphereAreaLight);
                             
 
   rectAreaLight.size = vec2(1);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_01,
-                            light: rectAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_02,
-                            light: rectAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_05,
-                            light: rectAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_10,
-                            light: rectAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_20,
-                            light: rectAreaLight);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_30,
+  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_radius1,
                             light: rectAreaLight);
 }
