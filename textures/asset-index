@@ -13,6 +13,9 @@ void main(ResourceIndex@ index)
   TextureSampler samplerNearest;
   
   samplerNearest = samplerInterpolated;
+  samplerNearest.magFilter = TextureFilter::NEAREST;
+  samplerNearest.minFilter = TextureFilter::LINEAR;
+  samplerNearest.mipFilter = TextureFilter::LINEAR;
 
   index.convertTexture(textureFile: "color-grid.texture", sourceFile: "color-grid.png", settings: importLosslessRgb);
   index.convertTexture(textureFile: "uv-grid.texture", sourceFile: "uv-grid.png", settings: importLosslessRgb);
