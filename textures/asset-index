@@ -4,9 +4,9 @@ void main(ResourceIndex@ index)
 {
   TextureImportSettings importLosslessRgb;
   TextureImportSettings importLosslessRgba;
-  importLosslessRgb.format = TextureFormat::BGR;
+  importLosslessRgb.format = TextureFormat::RGB;
   importLosslessRgb.type = TextureType::UINT8;
-  importLosslessRgba.format = TextureFormat::BGRA;
+  importLosslessRgba.format = TextureFormat::RGBA;
   importLosslessRgba.type = TextureType::UINT8;
   
   TextureSampler samplerInterpolated;
