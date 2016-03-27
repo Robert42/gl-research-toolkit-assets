@@ -32,5 +32,6 @@ Uuid<Scene> cornellBoxScene = Uuid<Scene>("{158da3d3-ef79-4895-add4-f2fe22c0dbff
 Uuid<Scene> cornellBoxRoughnessScene = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 Uuid<Scene> cornellBoxSphereSizesScene = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab90}");
 Uuid<Scene> cornellBoxRectSizesScene = Uuid<Scene>("{cd03b6ef-cd02-4d34-a19a-d0cd86c5ed78}");
+Uuid<Scene> cornellBoxTexturedSuzanne = Uuid<Scene>("{3642fd60-7276-498b-bea8-845b4d1f1715}");
 
 } // namespace namespace uuids
