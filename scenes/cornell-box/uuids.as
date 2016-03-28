@@ -26,12 +26,13 @@ Uuid<SceneLayer> cornellBox_RoughnessTestLights_SceneLayer = Uuid<SceneLayer>("{
 Uuid<SceneLayer> cornellBox_RoughnessTestMirrors_SceneLayer = Uuid<SceneLayer>("{87e6d354-8718-4945-839c-31edb6362878}");
 Uuid<SceneLayer> cornellBox_LightTest_SphereSizes_SceneLayer = Uuid<SceneLayer>("{7c87b87f-6b65-42e1-a052-3c77f67d9640}");
 Uuid<SceneLayer> cornellBox_LightTest_RectSizes_SceneLayer = Uuid<SceneLayer>("{168466a8-0e2f-4e85-84b9-cd16d6c48b42}");
+Uuid<SceneLayer> cornellBox_TexturedSuzanne_SceneLayer = Uuid<SceneLayer>("{37cc7890-2a38-4228-9e38-bb57726ff5ae}");
 
 
 Uuid<Scene> cornellBoxScene = Uuid<Scene>("{158da3d3-ef79-4895-add4-f2fe22c0dbff}");
 Uuid<Scene> cornellBoxRoughnessScene = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 Uuid<Scene> cornellBoxSphereSizesScene = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab90}");
 Uuid<Scene> cornellBoxRectSizesScene = Uuid<Scene>("{cd03b6ef-cd02-4d34-a19a-d0cd86c5ed78}");
-Uuid<Scene> cornellBoxTexturedSuzanne = Uuid<Scene>("{3642fd60-7276-498b-bea8-845b4d1f1715}");
+Uuid<Scene> cornellBoxTexturedSuzanne = Uuid<Scene>("{e8a07aee-d0d7-43b7-a9e2-867a824d2f48}");
 
 } // namespace namespace uuids

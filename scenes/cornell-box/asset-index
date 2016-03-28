@@ -79,6 +79,8 @@ void main(ResourceIndex@ index)
                                file: "cornell-box-sphere-sizes.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox_LightTest_RectSizes_SceneLayer,
                                file: "cornell-box-rect-sizes.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox_TexturedSuzanne_SceneLayer,
+                               file: "cornell-box-textured-suzanne.scene-layer");
                                
   index.registerSceneFile(uuid: uuids::cornellBoxScene,
                           file: "cornell-box.scene");
@@ -88,6 +90,8 @@ void main(ResourceIndex@ index)
                           file: "cornell-box-sphere-lights.scene");
   index.registerSceneFile(uuid: uuids::cornellBoxRectSizesScene,
                           file: "cornell-box-rect-lights.scene");
+  index.registerSceneFile(uuid: uuids::cornellBoxTexturedSuzanne,
+                          file: "cornell-box-textured-suzanne.scene");
 
   
   PlainColorMaterial wallPlainMaterial;
