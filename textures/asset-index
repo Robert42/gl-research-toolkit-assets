@@ -10,7 +10,8 @@ void main(ResourceIndex@ index)
   importLosslessRgba.format = TextureFormat::RGBA;
   importLosslessRgba.type = TextureType::UINT8;
   importLosslessNormalmap.format = TextureFormat::RGB;
-  importLosslessNormalmap.type = TextureType::UINT8;
+  importLosslessNormalmap.type = TextureType::INT8;
+  importLosslessNormalmap.sourceIsNormalMap = true;
   
   TextureSampler samplerInterpolated;
   TextureSampler samplerNearest;
