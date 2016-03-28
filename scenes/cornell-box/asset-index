@@ -1,5 +1,6 @@
 #include "uuids.as"
-#include "common/uuids.as"
+#include "common/meshes/uuids.as"
+#include "common/textures/uuids.as"
 
 void main(ResourceIndex@ index)
 {
@@ -14,6 +15,10 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['rightWall'] = uuids::rightWall;
   importSettings.materialUuids['wall'] = uuids::wall;
   importSettings.materialUuids['light'] = uuids::lightMaterial;
+  importSettings.materialUuids['uv-grid'] = uuids::uvgrid_test_material;
+  importSettings.materialUuids['color-grid'] = uuids::colorgrid_test_material;
+  
+  importSettings.meshUuids['Suzanne'] = uuids::smooth;
   
   importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox_camera;
   importSettings.cameraUuids['camera-mirrors'] = uuids::cornellBox_cameraMirrors;
@@ -63,6 +68,10 @@ void main(ResourceIndex@ index)
   index.convertSceneGraph(sceneGraphFile: "cornell-box-rect-sizes.scene-graph",
                           sourceFile: "cornell-box-light-sources.blend",
                           groupToImport: "rect-area-light-sizes",
+                          settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-suzanne.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          groupToImport: "suzanne",
                           settings: importSettings);
                           
   index.registerSceneLayerFile(uuid: uuids::cornellBox_Empty_SceneLayer,
