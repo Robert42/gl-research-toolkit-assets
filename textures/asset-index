@@ -38,5 +38,13 @@ void main(ResourceIndex@ index)
   index.registerTextureFile(uuid: uuids::transparency_text, file: "transparency-grtestid.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   
   TexturedMaterialOpaque colorgrid_test_material;
+  TexturedMaterialOpaque uvgrid_test_material;
   
+  colorgrid_test_material.basecolor_map = TextureHandle(uuids::color_grid);
+  uvgrid_test_material.basecolor_map = TextureHandle(uuids::uv_grid);
+  
+  index.registerMaterial(uuid: uuids::colorgrid_test_material,
+                         material: colorgrid_test_material);
+  index.registerMaterial(uuid: uuids::uvgrid_test_material,
+                         material: uvgrid_test_material);
 }
