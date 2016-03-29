@@ -16,7 +16,7 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['wall'] = uuids::wall;
   importSettings.materialUuids['light'] = uuids::lightMaterial;
   importSettings.materialUuids['uv-grid'] = uuids::uvgrid_test_material;
-  importSettings.materialUuids['color-grid'] = uuids::rightWall;
+  importSettings.materialUuids['color-grid'] = uuids::colorgrid_test_material;
   
   importSettings.meshUuids['Suzanne'] = uuids::smooth;
   
