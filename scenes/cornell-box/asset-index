@@ -1,5 +1,5 @@
 #include "uuids.as"
-#include "common/meshes/uuids.as"
+#include "common/meshes/suzanne/uuids.as"
 #include "common/textures/uuids.as"
 
 void main(ResourceIndex@ index)
@@ -16,7 +16,7 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['wall'] = uuids::wall;
   importSettings.materialUuids['light'] = uuids::lightMaterial;
   importSettings.materialUuids['uv-grid'] = uuids::uvgrid_test_material;
-  importSettings.materialUuids['color-grid'] = uuids::colorgrid_test_material;
+  importSettings.materialUuids['color-grid'] = uuids::rightWall;
   
   importSettings.meshUuids['Suzanne'] = uuids::smooth;
   
