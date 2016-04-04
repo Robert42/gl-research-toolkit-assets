@@ -37,16 +37,24 @@ void main(ResourceIndex@ index)
   index.registerTextureFile(uuid: uuids::textures::white, file: "white.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::color_grid, file: "color-grid.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::uv_grid, file: "uv-grid.texture", defaultSampler: samplerNearest, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-grtestid.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
+  index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-test.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   
   TexturedMaterial colorgrid_test_material;
   TexturedMaterial uvgrid_test_material;
+  TexturedMaterial transparency_test_material;
   
   colorgrid_test_material.basecolor_map = TextureHandle(uuids::textures::color_grid);
   uvgrid_test_material.basecolor_map = TextureHandle(uuids::textures::uv_grid);
+  
+  transparency_test_material.basecolor_map = TextureHandle(uuids::textures::transparency_text);
+  transparency_test_material.masked = true;
+  transparency_test_material.two_sided = true;
   
   index.registerMaterial(uuid: uuids::materials::colorgrid_test,
                          material: colorgrid_test_material);
   index.registerMaterial(uuid: uuids::materials::uvgrid_test,
                          material: uvgrid_test_material);
+                         
+  index.registerMaterial(uuid: uuids::materials::transparency_test,
+                         material: transparency_test_material);
 }

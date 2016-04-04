@@ -14,6 +14,7 @@ namespace materials {
 
 Uuid<Material> colorgrid_test("{60951935-1093-40a7-aff4-da612a7cf7bf}");
 Uuid<Material> uvgrid_test("{4e316f99-627f-4e6d-a897-c2dc891635fa}");
+Uuid<Material> transparency_test("{16314c87-122b-484a-a098-a6f66e8d75e2}");
 
 } // namespace materials
 } // namespace uuids
