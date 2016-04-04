@@ -2,10 +2,10 @@
 
 void main(Scene@ scene)
 {
-  scene.loadSceneLayer(uuids::cornellBox_Empty_SceneLayer);
-  scene.loadSceneLayer(uuids::cornellBox_LightTest_SphereSizes_SceneLayer);
-  scene.loadSceneLayer(uuids::cornellBox_RoughnessTestMirrors_SceneLayer);
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::empty);
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::lightTest_SphereSizes);
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::roughnessTestMirrors);
   scene.addSceneLayer_debugCamera();
   
-  scene.camera[CameraSlot::MAIN_CAMERA] = uuids::cornellBox_cameraMirrors;
+  scene.camera[CameraSlot::MAIN_CAMERA] = uuids::cornellBox::cameras::mirrors;
 }

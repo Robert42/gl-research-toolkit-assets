@@ -6,39 +6,39 @@ void main(ResourceIndex@ index)
 {
   SceneGraphImportSettings importSettings;
   
-  importSettings.materialUuids['mirror-roughness-0_0'] = uuids::mirrorRoughness_00;
-  importSettings.materialUuids['mirror-roughness-0_1'] = uuids::mirrorRoughness_10;
-  importSettings.materialUuids['mirror-roughness-0_2'] = uuids::mirrorRoughness_20;
-  importSettings.materialUuids['mirror-roughness-0_3'] = uuids::mirrorRoughness_30;
-  importSettings.materialUuids['mirror-roughness-0_4'] = uuids::mirrorRoughness_40;
-  importSettings.materialUuids['leftWall'] = uuids::leftWall;
-  importSettings.materialUuids['rightWall'] = uuids::rightWall;
-  importSettings.materialUuids['wall'] = uuids::wall;
-  importSettings.materialUuids['light'] = uuids::lightMaterial;
-  importSettings.materialUuids['uv-grid'] = uuids::uvgrid_test_material;
-  importSettings.materialUuids['color-grid'] = uuids::colorgrid_test_material;
+  importSettings.materialUuids['mirror-roughness-0_0'] = uuids::cornellBox::materials::mirrorRoughness_00;
+  importSettings.materialUuids['mirror-roughness-0_1'] = uuids::cornellBox::materials::mirrorRoughness_10;
+  importSettings.materialUuids['mirror-roughness-0_2'] = uuids::cornellBox::materials::mirrorRoughness_20;
+  importSettings.materialUuids['mirror-roughness-0_3'] = uuids::cornellBox::materials::mirrorRoughness_30;
+  importSettings.materialUuids['mirror-roughness-0_4'] = uuids::cornellBox::materials::mirrorRoughness_40;
+  importSettings.materialUuids['leftWall'] = uuids::cornellBox::materials::leftWall;
+  importSettings.materialUuids['rightWall'] = uuids::cornellBox::materials::rightWall;
+  importSettings.materialUuids['wall'] = uuids::cornellBox::materials::wall;
+  importSettings.materialUuids['light'] = uuids::cornellBox::materials::light;
+  importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
+  importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
   
-  importSettings.meshUuids['Suzanne'] = uuids::smooth;
+  importSettings.meshUuids['Suzanne'] = uuids::suzanne::meshes::smooth;
   
-  importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox_camera;
-  importSettings.cameraUuids['camera-mirrors'] = uuids::cornellBox_cameraMirrors;
+  importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox::cameras::defaultCamera;
+  importSettings.cameraUuids['camera-mirrors'] = uuids::cornellBox::cameras::mirrors;
   
-  importSettings.lightUuids['cornellBox-rectAreaLight'] = uuids::cornellBox_rectAreaLight;
-  importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = uuids::cornellBox_roughness_rectAreaLight;
-  importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = uuids::cornellBox_roughness_sphereAreaLight;
+  importSettings.lightUuids['cornellBox-rectAreaLight'] = uuids::cornellBox::ligthSources::rectAreaLight;
+  importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = uuids::cornellBox::ligthSources::rectAreaLight_roughnessScene;
+  importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = uuids::cornellBox::ligthSources::sphereAreaLight_roughnessScene;
   
-  importSettings.lightUuids['cornellBox-sphereAreaLight-01'] = uuids::cornellBox_sphereAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-05'] = uuids::cornellBox_sphereAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-10']  = uuids::cornellBox_sphereAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-25'] = uuids::cornellBox_sphereAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-30']  = uuids::cornellBox_sphereAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-sphereAreaLight-50']  = uuids::cornellBox_sphereAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-rectAreaLight-01'] = uuids::cornellBox_rectAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-rectAreaLight-02'] = uuids::cornellBox_rectAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-rectAreaLight-05'] = uuids::cornellBox_rectAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-rectAreaLight-10'] = uuids::cornellBox_rectAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-rectAreaLight-20'] = uuids::cornellBox_rectAreaLight_radius1;
-  importSettings.lightUuids['cornellBox-rectAreaLight-30'] = uuids::cornellBox_rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-01'] = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-05'] = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-10']  = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-25'] = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-30']  = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-sphereAreaLight-50']  = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-01'] = uuids::cornellBox::ligthSources::rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-02'] = uuids::cornellBox::ligthSources::rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-05'] = uuids::cornellBox::ligthSources::rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-10'] = uuids::cornellBox::ligthSources::rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-20'] = uuids::cornellBox::ligthSources::rectAreaLight_radius1;
+  importSettings.lightUuids['cornellBox-rectAreaLight-30'] = uuids::cornellBox::ligthSources::rectAreaLight_radius1;
 
   index.convertSceneGraph(sceneGraphFile: "cornell-box-empty.scene-graph",
                           sourceFile: "cornell-box.blend",
@@ -74,93 +74,93 @@ void main(ResourceIndex@ index)
                           groupToImport: "suzanne",
                           settings: importSettings);
                           
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_Empty_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::empty,
                                file: "cornell-box-empty.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_DemoCubes_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::demoCubes,
                                file: "cornell-box-demo-cubes.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_DefaultLight_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::defaultLight,
                                file: "cornell-box-default-light.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_RoughnessTestLights_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::roughnessTestLights,
                                file: "cornell-box-roughness-lights.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_RoughnessTestMirrors_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::roughnessTestMirrors,
                                file: "cornell-box-roughness-mirrors.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_LightTest_SphereSizes_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::lightTest_SphereSizes,
                                file: "cornell-box-sphere-sizes.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_LightTest_RectSizes_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::lightTest_RectSizes,
                                file: "cornell-box-rect-sizes.scene-layer");
-  index.registerSceneLayerFile(uuid: uuids::cornellBox_TexturedSuzanne_SceneLayer,
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::texturedSuzanne,
                                file: "cornell-box-textured-suzanne.scene-layer");
                                
-  index.registerSceneFile(uuid: uuids::cornellBoxScene,
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::defaultCubes,
                           file: "cornell-box.scene");
-  index.registerSceneFile(uuid: uuids::cornellBoxRoughnessScene,
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::roughness,
                           file: "cornell-box-roughness.scene");
-  index.registerSceneFile(uuid: uuids::cornellBoxSphereSizesScene,
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::sphereLightSizes,
                           file: "cornell-box-sphere-lights.scene");
-  index.registerSceneFile(uuid: uuids::cornellBoxRectSizesScene,
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::rectLightSizes,
                           file: "cornell-box-rect-lights.scene");
-  index.registerSceneFile(uuid: uuids::cornellBoxTexturedSuzanne,
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::texturedSuzanne,
                           file: "cornell-box-textured-suzanne.scene");
 
   
   PlainColorMaterial wallPlainMaterial;
   wallPlainMaterial.smoothness = 0.3;
   wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
-  index.registerMaterial(uuid: uuids::leftWall,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::leftWall,
                          material: wallPlainMaterial);
   wallPlainMaterial.base_color = vec3(0.14, 0.45, 0.091);
-  index.registerMaterial(uuid: uuids::rightWall,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::rightWall,
                          material: wallPlainMaterial);
   wallPlainMaterial.base_color = vec3(0.723);
-  index.registerMaterial(uuid: uuids::wall,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::wall,
                          material: wallPlainMaterial);
                          
   PlainColorMaterial lightPlainMaterial;
   lightPlainMaterial.base_color = vec3(0);
   lightPlainMaterial.emission = vec3(1);
-  index.registerMaterial(uuid: uuids::lightMaterial,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::light,
                          material: lightPlainMaterial);
                          
   PlainColorMaterial mirrorPlainMaterial;
   mirrorPlainMaterial.base_color = vec3(1);
   mirrorPlainMaterial.metal_mask = 1.0;
   mirrorPlainMaterial.smoothness = 1.0;
-  index.registerMaterial(uuid: uuids::mirrorRoughness_00,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::mirrorRoughness_00,
                          material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.9;
-  index.registerMaterial(uuid: uuids::mirrorRoughness_10,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::mirrorRoughness_10,
                         material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.8;
-  index.registerMaterial(uuid: uuids::mirrorRoughness_20,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::mirrorRoughness_20,
                         material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.7;
-  index.registerMaterial(uuid: uuids::mirrorRoughness_30,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::mirrorRoughness_30,
                          material: mirrorPlainMaterial);
   mirrorPlainMaterial.smoothness = 0.6;
-  index.registerMaterial(uuid: uuids::mirrorRoughness_40,
+  index.registerMaterial(uuid: uuids::cornellBox::materials::mirrorRoughness_40,
                          material: mirrorPlainMaterial);
 
   RectAreaLightSource rectAreaLight;
   SphereAreaLightSource sphereAreaLight;
   
   rectAreaLight.size = vec2(0.47, 0.38);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight,
+  index.registerLightSource(uuid: uuids::cornellBox::ligthSources::rectAreaLight,
                             light: rectAreaLight);
                             
   rectAreaLight.size = vec2(0.3);
-  index.registerLightSource(uuid: uuids::cornellBox_roughness_rectAreaLight,
+  index.registerLightSource(uuid: uuids::cornellBox::ligthSources::rectAreaLight_roughnessScene,
                             light: rectAreaLight);
   sphereAreaLight.radius = 0.1125;
-  index.registerLightSource(uuid: uuids::cornellBox_roughness_sphereAreaLight,
+  index.registerLightSource(uuid: uuids::cornellBox::ligthSources::sphereAreaLight_roughnessScene,
                             light: sphereAreaLight);
                             
   sphereAreaLight.radius = 1.0;
   sphereAreaLight.luminous_power *= 0.1;
-  index.registerLightSource(uuid: uuids::cornellBox_sphereAreaLight_radius1,
+  index.registerLightSource(uuid: uuids::cornellBox::ligthSources::sphereAreaLight_radius1,
                             light: sphereAreaLight);
                             
 
   rectAreaLight.size = vec2(1);
-  index.registerLightSource(uuid: uuids::cornellBox_rectAreaLight_radius1,
+  index.registerLightSource(uuid: uuids::cornellBox::ligthSources::rectAreaLight_radius1,
                             light: rectAreaLight);
 }

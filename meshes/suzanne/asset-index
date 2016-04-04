@@ -5,6 +5,6 @@ void main(ResourceIndex@ index)
   index.convertStaticMesh(meshFile: "suzanne.mesh", sourceFile: "suzanne.blend", groupToImport: "low-poly");
   index.convertStaticMesh(meshFile: "suzanne-smooth.mesh", sourceFile: "suzanne.blend", groupToImport: "smooth");
 
-  index.registerStaticMesh(uuids::low_poly, file: "suzanne.mesh");
-  index.registerStaticMesh(uuids::smooth, file: "suzanne-smooth.mesh");
+  index.registerStaticMesh(uuids::suzanne::meshes::low_poly, file: "suzanne.mesh");
+  index.registerStaticMesh(uuids::suzanne::meshes::smooth, file: "suzanne-smooth.mesh");
 }
