@@ -42,8 +42,8 @@ void main(ResourceIndex@ index)
   index.registerTextureFile(uuid: uuids::textures::uv_grid, file: "uv-grid.texture", defaultSampler: samplerNearest, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-test.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
 
-  index.registerTextureFile(uuid: uuids::textures::fruit_plate_4x4, file: "fruit-plate-4x4.texture", defaultSampler: samplerNearest, generateMipmaps: false);
-  index.registerTextureFile(uuid: uuids::textures::fruit_plate_16x16, file: "fruit-plate-16x16.texture", defaultSampler: samplerNearest, generateMipmaps: false);
+  index.registerTextureFile(uuid: uuids::textures::fruit_plate_4x4, file: "fruit-plate-4x4.texture", defaultSampler: samplerInterpolated, generateMipmaps: false);
+  index.registerTextureFile(uuid: uuids::textures::fruit_plate_256x256, file: "fruit-plate-256x256.texture", defaultSampler: samplerInterpolated, generateMipmaps: false);
   
   TexturedMaterial colorgrid_test_material;
   TexturedMaterial uvgrid_test_material;
