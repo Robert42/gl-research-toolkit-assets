@@ -7,5 +7,5 @@ void main(Scene@ scene)
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultLight);
   scene.addSceneLayer_debugCamera();
   
-  scene.camera[CameraSlot::MAIN_CAMERA] = uuids::cornellBox::cameras::default;
+  scene.camera[CameraSlot::MAIN_CAMERA] = uuids::cornellBox::cameras::defaultCamera;
 }
