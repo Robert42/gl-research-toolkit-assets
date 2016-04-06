@@ -9,9 +9,6 @@ void main(ResourceIndex@ index)
   importLosslessRgb.type = TextureType::UINT8;
   importLosslessRgba.format = TextureFormat::RGBA;
   importLosslessRgba.type = TextureType::UINT8;
-  importLosslessNormalmap.format = TextureFormat::RGB;
-  importLosslessNormalmap.type = TextureType::INT8;
-  importLosslessNormalmap.sourceIsNormalMap = true;
   
   TextureSampler samplerInterpolated;
   TextureSampler samplerNearest;
@@ -21,13 +18,28 @@ void main(ResourceIndex@ index)
   samplerNearest.minFilter = TextureFilter::LINEAR;
   samplerNearest.mipFilter = TextureFilter::LINEAR;
 
-  index.convertTexture(textureFile: "fallback-normal-map.texture", sourceFile: "fallback-normal-map.png", settings: importLosslessNormalmap);
-  index.convertTexture(textureFile: "fallback-srmo.texture", sourceFile: "fallback-srmo.png", settings: importLosslessRgba);
-  index.convertTexture(textureFile: "black.texture", sourceFile: "black.png", settings: importLosslessRgb);
-  index.convertTexture(textureFile: "white.texture", sourceFile: "white.png", settings: importLosslessRgb);
-  index.convertTexture(textureFile: "grey.texture", sourceFile: "grey.png", settings: importLosslessRgb);
+  TextureImportSettings proceduralImportSettings;
+  proceduralImportSettings.format = TextureFormat::RGB;
+  proceduralImportSettings.type = TextureType::INT8;
+  proceduralImportSettings.force_value = vec4(0, 1, 0, 0);
+  index.convertTexture(textureFile: "fallback-normal-map.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
+  proceduralImportSettings.format = TextureFormat::RGBA;
+  proceduralImportSettings.type = TextureType::UINT8;
+  proceduralImportSettings.force_value = vec4(0, 0.5, 0, 1);
+  index.convertTexture(textureFile: "fallback-srmo.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
+  proceduralImportSettings.format = TextureFormat::RGB;
+  proceduralImportSettings.type = TextureType::UINT8;
+  proceduralImportSettings.force_value = vec4(0, 0, 0, 1);
+  index.convertTexture(textureFile: "black.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
+  proceduralImportSettings.format = TextureFormat::RGB;
+  proceduralImportSettings.type = TextureType::UINT8;
+  proceduralImportSettings.force_value = vec4(1, 1, 1, 1);
+  index.convertTexture(textureFile: "white.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
+  proceduralImportSettings.format = TextureFormat::RGB;
+  proceduralImportSettings.type = TextureType::UINT8;
+  proceduralImportSettings.force_value = vec4(0.5, 0.5, 0.5, 1);
+  index.convertTexture(textureFile: "grey.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
 
-  index.convertTexture(textureFile: "fruit-plate-4x4.texture", sourceFile: "fruit-plate-4x4.png", settings: importLosslessRgb);
   index.convertTexture(textureFile: "fruit-plate-256x256.texture", sourceFile: "fruit-plate-256x256.png", settings: importLosslessRgb);
   
   index.convertTexture(textureFile: "color-grid.texture", sourceFile: "color-grid.png", settings: importLosslessRgb);
@@ -44,7 +56,6 @@ void main(ResourceIndex@ index)
   index.registerTextureFile(uuid: uuids::textures::uv_grid, file: "uv-grid.texture", defaultSampler: samplerNearest, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-test.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
 
-  index.registerTextureFile(uuid: uuids::textures::fruit_plate_4x4, file: "fruit-plate-4x4.texture", defaultSampler: samplerInterpolated, generateMipmaps: false);
   index.registerTextureFile(uuid: uuids::textures::fruit_plate_256x256, file: "fruit-plate-256x256.texture", defaultSampler: samplerInterpolated, generateMipmaps: false);
   
   TexturedMaterial colorgrid_test_material;
