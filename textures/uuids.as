@@ -8,6 +8,7 @@ Uuid<Texture> fallback_normal_map("{d3d320ce-95b0-4bff-ba65-381ad005b012}");
 Uuid<Texture> fallback_srmo_map("{1a6d4dc1-58b2-47e9-beb6-724da5d2d98f}");
 Uuid<Texture> black("{a8b7ec89-cf66-4ef6-b68f-ec98d86dc6fb}");
 Uuid<Texture> white("{fa46351a-eed3-4b6c-91f6-a8a62a6c6b02}");
+Uuid<Texture> grey("{adb8470e-57b9-4f94-8ba8-c7a2d93fccf9}");
 Uuid<Texture> fruit_plate_4x4("{7d72e20c-0bb1-4202-bf22-38e9a70b3dfc}");
 Uuid<Texture> fruit_plate_256x256("{3cc3ac32-b78c-4025-8905-6ea577fa4c13}");
 

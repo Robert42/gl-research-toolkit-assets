@@ -25,6 +25,7 @@ void main(ResourceIndex@ index)
   index.convertTexture(textureFile: "fallback-srmo.texture", sourceFile: "fallback-srmo.png", settings: importLosslessRgba);
   index.convertTexture(textureFile: "black.texture", sourceFile: "black.png", settings: importLosslessRgb);
   index.convertTexture(textureFile: "white.texture", sourceFile: "white.png", settings: importLosslessRgb);
+  index.convertTexture(textureFile: "grey.texture", sourceFile: "grey.png", settings: importLosslessRgb);
 
   index.convertTexture(textureFile: "fruit-plate-4x4.texture", sourceFile: "fruit-plate-4x4.png", settings: importLosslessRgb);
   index.convertTexture(textureFile: "fruit-plate-256x256.texture", sourceFile: "fruit-plate-256x256.png", settings: importLosslessRgb);
@@ -38,6 +39,7 @@ void main(ResourceIndex@ index)
   index.registerTextureFile(uuid: uuids::textures::fallback_srmo_map, file: "fallback-srmo.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::black, file: "black.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::white, file: "white.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
+  index.registerTextureFile(uuid: uuids::textures::grey, file: "grey.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::color_grid, file: "color-grid.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::uv_grid, file: "uv-grid.texture", defaultSampler: samplerNearest, generateMipmaps: true);
   index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-test.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
