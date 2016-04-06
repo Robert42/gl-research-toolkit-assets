@@ -46,16 +46,16 @@ void main(ResourceIndex@ index)
   
   index.convertTexture(textureFile: "transparency-test.texture", sourceFile: "transparency-test.png", settings: importLosslessRgba);
   
-  index.registerTextureFile(uuid: uuids::textures::fallback_normal_map, file: "fallback-normal-map.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::fallback_srmo_map, file: "fallback-srmo.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::black, file: "black.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::white, file: "white.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::grey, file: "grey.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::color_grid, file: "color-grid.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::uv_grid, file: "uv-grid.texture", defaultSampler: samplerNearest, generateMipmaps: true);
-  index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-test.texture", defaultSampler: samplerInterpolated, generateMipmaps: true);
+  index.registerTextureFile(uuid: uuids::textures::fallback_normal_map, file: "fallback-normal-map.texture", defaultSampler: samplerInterpolated);
+  index.registerTextureFile(uuid: uuids::textures::fallback_srmo_map, file: "fallback-srmo.texture", defaultSampler: samplerInterpolated);
+  index.registerTextureFile(uuid: uuids::textures::black, file: "black.texture", defaultSampler: samplerInterpolated);
+  index.registerTextureFile(uuid: uuids::textures::white, file: "white.texture", defaultSampler: samplerInterpolated);
+  index.registerTextureFile(uuid: uuids::textures::grey, file: "grey.texture", defaultSampler: samplerInterpolated);
+  index.registerTextureFile(uuid: uuids::textures::color_grid, file: "color-grid.texture", defaultSampler: samplerInterpolated);
+  index.registerTextureFile(uuid: uuids::textures::uv_grid, file: "uv-grid.texture", defaultSampler: samplerNearest);
+  index.registerTextureFile(uuid: uuids::textures::transparency_text, file: "transparency-test.texture", defaultSampler: samplerInterpolated);
 
-  index.registerTextureFile(uuid: uuids::textures::fruit_plate_256x256, file: "fruit-plate-256x256.texture", defaultSampler: samplerInterpolated, generateMipmaps: false);
+  index.registerTextureFile(uuid: uuids::textures::fruit_plate_256x256, file: "fruit-plate-256x256.texture", defaultSampler: samplerInterpolated);
   
   TexturedMaterial colorgrid_test_material;
   TexturedMaterial uvgrid_test_material;
