@@ -25,7 +25,7 @@ void main(ResourceIndex@ index)
   index.convertTexture(textureFile: "fallback-normal-map.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
   proceduralImportSettings.format = TextureFormat::RGBA;
   proceduralImportSettings.type = TextureType::UINT8;
-  proceduralImportSettings.force_value = vec4(0, 0.5, 0, 1);
+  proceduralImportSettings.force_value = vec4(0.5, 0.5, 0, 1);
   index.convertTexture(textureFile: "fallback-srmo.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
   proceduralImportSettings.format = TextureFormat::RGB;
   proceduralImportSettings.type = TextureType::UINT8;
