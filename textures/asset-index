@@ -2,7 +2,6 @@
 
 void main(ResourceIndex@ index)
 {
-  TextureImportSettings importLosslessNormalmap;
   TextureImportSettings importLosslessRgb;
   TextureImportSettings importLosslessRgba;
   importLosslessRgb.format = TextureFormat::RGB;
@@ -21,7 +20,7 @@ void main(ResourceIndex@ index)
   TextureImportSettings proceduralImportSettings;
   proceduralImportSettings.format = TextureFormat::RGB;
   proceduralImportSettings.type = TextureType::INT8;
-  proceduralImportSettings.force_value = vec4(0, 1, 0, 0);
+  proceduralImportSettings.force_value = vec4(0, 0, 1, 0);
   index.convertTexture(textureFile: "fallback-normal-map.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
   proceduralImportSettings.format = TextureFormat::RGBA;
   proceduralImportSettings.type = TextureType::UINT8;
