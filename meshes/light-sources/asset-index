@@ -5,6 +5,6 @@ void main(ResourceIndex@ index)
   index.convertStaticMesh(meshFile: "sphere.mesh", sourceFile: "sphere.blend");
   index.convertStaticMesh(meshFile: "rect.mesh", sourceFile: "rect.blend");
 
-  index.registerStaticMesh(uuids::suzanne::meshes::sphere, file: "sphere.mesh");
-  index.registerStaticMesh(uuids::suzanne::meshes::rect, file: "rect.mesh");
+  index.registerStaticMesh(uuids::light_sources::meshes::sphere, file: "sphere.mesh");
+  index.registerStaticMesh(uuids::light_sources::meshes::rect, file: "rect.mesh");
 }
