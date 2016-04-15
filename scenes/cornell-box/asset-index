@@ -14,7 +14,6 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['leftWall'] = uuids::cornellBox::materials::leftWall;
   importSettings.materialUuids['rightWall'] = uuids::cornellBox::materials::rightWall;
   importSettings.materialUuids['wall'] = uuids::cornellBox::materials::wall;
-  importSettings.materialUuids['light'] = uuids::cornellBox::materials::light;
   importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
   importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
   
@@ -114,12 +113,6 @@ void main(ResourceIndex@ index)
   wallPlainMaterial.base_color = vec3(0.723);
   index.registerMaterial(uuid: uuids::cornellBox::materials::wall,
                          material: wallPlainMaterial);
-                         
-  PlainColorMaterial lightPlainMaterial;
-  lightPlainMaterial.base_color = vec3(0);
-  lightPlainMaterial.emission = vec3(1);
-  index.registerMaterial(uuid: uuids::cornellBox::materials::light,
-                         material: lightPlainMaterial);
                          
   PlainColorMaterial mirrorPlainMaterial;
   mirrorPlainMaterial.base_color = vec3(1);

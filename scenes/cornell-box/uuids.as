@@ -10,7 +10,6 @@ Uuid<Material> mirrorRoughness_40 = Uuid<Material>("{173f0093-02b2-4703-9146-2bc
 Uuid<Material> leftWall = Uuid<Material>("{032ff6cf-dea3-4912-8aa0-eb16cc9ec774}");
 Uuid<Material> rightWall = Uuid<Material>("{e22cb1e5-428d-4c3a-9657-41a1df21d3e4}");
 Uuid<Material> wall = Uuid<Material>("{00862bf8-6ba5-425a-ad2b-c902058fa3cc}");
-Uuid<Material> light = Uuid<Material>("{5f1e2de9-6093-45cf-9cac-8aa856dacea3}");
 
 } // namespace materials
 namespace ligthSources {
