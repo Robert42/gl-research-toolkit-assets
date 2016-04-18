@@ -1,0 +1,9 @@
+#include "uuids.as"
+
+void main(Scene@ scene)
+{
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::sphereAtOrigin);
+  scene.addSceneLayer_debugCamera();
+  
+  scene.camera[CameraSlot::MAIN_CAMERA] = uuids::cornellBox::cameras::camera;
+}

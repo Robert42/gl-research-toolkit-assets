@@ -19,12 +19,14 @@ void main(ResourceIndex@ index)
   
   importSettings.meshUuids['Suzanne'] = uuids::suzanne::meshes::smooth;
   
+  importSettings.cameraUuids['camera'] = uuids::cornellBox::cameras::camera;
   importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox::cameras::defaultCamera;
   importSettings.cameraUuids['camera-mirrors'] = uuids::cornellBox::cameras::mirrors;
   
   importSettings.lightUuids['cornellBox-rectAreaLight'] = uuids::cornellBox::ligthSources::rectAreaLight;
   importSettings.lightUuids['cornellBox-roughness-rectAreaLight'] = uuids::cornellBox::ligthSources::rectAreaLight_roughnessScene;
   importSettings.lightUuids['cornellBox-roughness-sphereAreaLight'] = uuids::cornellBox::ligthSources::sphereAreaLight_roughnessScene;
+  importSettings.lightUuids['light'] = uuids::cornellBox::ligthSources::sphereAreaLight_roughnessScene;
   
   importSettings.lightUuids['cornellBox-sphereAreaLight-01'] = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
   importSettings.lightUuids['cornellBox-sphereAreaLight-05'] = uuids::cornellBox::ligthSources::sphereAreaLight_radius1;
@@ -72,6 +74,10 @@ void main(ResourceIndex@ index)
                           sourceFile: "cornell-box.blend",
                           groupToImport: "suzanne",
                           settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "sphere-at-origin.scene-graph",
+                          sourceFile: "sphere-at-origin.blend",
+                          groupToImport: "sphere-at-origin",
+                          settings: importSettings);
                           
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::empty,
                                file: "cornell-box-empty.scene-layer");
@@ -89,6 +95,8 @@ void main(ResourceIndex@ index)
                                file: "cornell-box-rect-sizes.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::texturedSuzanne,
                                file: "cornell-box-textured-suzanne.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::sphereAtOrigin,
+                               file: "sphere-at-origin.scene-layer");
                                
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::defaultCubes,
                           file: "cornell-box.scene");
@@ -100,6 +108,8 @@ void main(ResourceIndex@ index)
                           file: "cornell-box-rect-lights.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::texturedSuzanne,
                           file: "cornell-box-textured-suzanne.scene");
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::empty,
+                          file: "empty.scene");
 
   
   PlainColorMaterial wallPlainMaterial;

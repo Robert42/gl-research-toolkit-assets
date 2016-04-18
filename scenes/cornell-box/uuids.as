@@ -23,6 +23,7 @@ Uuid<LightSource> rectAreaLight_radius1 = Uuid<LightSource>("{995d80bc-a6ec-4853
 } // namespace ligthSources
 namespace cameras {
 
+Uuid<CameraComponent> camera = Uuid<CameraComponent>("{7a05078d-7b12-4d95-a8ed-bebf59832060}");
 Uuid<CameraComponent> defaultCamera = Uuid<CameraComponent>("{5c753337-6678-43ed-8a94-6182d2e42dbd}");
 Uuid<CameraComponent> mirrors = Uuid<CameraComponent>("{1ec1058d-9913-4035-8ef4-9915e95acb3c}");
 
@@ -37,6 +38,10 @@ Uuid<SceneLayer> roughnessTestMirrors = Uuid<SceneLayer>("{87e6d354-8718-4945-83
 Uuid<SceneLayer> lightTest_SphereSizes = Uuid<SceneLayer>("{7c87b87f-6b65-42e1-a052-3c77f67d9640}");
 Uuid<SceneLayer> lightTest_RectSizes = Uuid<SceneLayer>("{168466a8-0e2f-4e85-84b9-cd16d6c48b42}");
 Uuid<SceneLayer> texturedSuzanne = Uuid<SceneLayer>("{37cc7890-2a38-4228-9e38-bb57726ff5ae}");
+Uuid<SceneLayer> sphereAtOrigin = Uuid<SceneLayer>("{941ff512-4b9d-4540-903c-ca4fbf7ba3fc}");
+Uuid<SceneLayer> cameraLayer = Uuid<SceneLayer>("{61f7a05d-0893-4f7e-b1ae-f134c1014fc2}");
+Uuid<SceneLayer> lightLayer = Uuid<SceneLayer>("{d70f109f-564a-495d-958f-93173ac13725}");
+
 
 } // namespace sceneLayers
 namespace scenes {
@@ -46,6 +51,7 @@ Uuid<Scene> roughness = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 Uuid<Scene> sphereLightSizes = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab90}");
 Uuid<Scene> rectLightSizes = Uuid<Scene>("{cd03b6ef-cd02-4d34-a19a-d0cd86c5ed78}");
 Uuid<Scene> texturedSuzanne = Uuid<Scene>("{e8a07aee-d0d7-43b7-a9e2-867a824d2f48}");
+Uuid<Scene> empty = Uuid<Scene>("{d5167e9c-3758-48ad-bca4-fe5333809cb4}");
 
 } // namespace scenes
 } // namespace cornellBox
