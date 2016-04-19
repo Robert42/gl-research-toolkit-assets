@@ -7,4 +7,8 @@ void main(ResourceIndex@ index)
 
   index.registerStaticMesh(uuids::suzanne::meshes::low_poly, file: "suzanne.mesh");
   index.registerStaticMesh(uuids::suzanne::meshes::smooth, file: "suzanne-smooth.mesh");
+  
+  Voxelizer voxelizer = index.defaultVoxelizer;
+  voxelizer.voxelize(uuids::suzanne::meshes::low_poly);
+  voxelizer.voxelize(uuids::suzanne::meshes::smooth);
 }
