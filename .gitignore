@@ -3,3 +3,4 @@
 *.texture
 *.scene-graph
 *.mesh
+*.voxel-metadata
