@@ -18,8 +18,8 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
   importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
   
-  //importSettings.meshUuids['suzanne-aabb'] = uuids::suzanne::meshes::smooth;
-  //importSettings.meshUuids['bunny-aabb'] = uuids::meshes::bunny;
+  importSettings.meshUuids['suzanne-aabb'] = uuids::suzanne::meshes::smooth;
+  importSettings.meshUuids['bunny-aabb'] = uuids::meshes::bunny;
   
   importSettings.cameraUuids['camera'] = uuids::cornellBox::cameras::camera;
   importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox::cameras::defaultCamera;
