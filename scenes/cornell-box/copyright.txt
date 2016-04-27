@@ -15,4 +15,4 @@ Original Copyright Note:
 # http://graphics.cs.williams.edu/data
 # 
 
-
+The cornell-box.blend file links to other blend files. Most notalby bunny.blend. Please take a look at ../../../advanced/meshes/CREDITS.txt for copyright notes about the bunny.

@@ -38,6 +38,8 @@ Uuid<SceneLayer> roughnessTestMirrors = Uuid<SceneLayer>("{87e6d354-8718-4945-83
 Uuid<SceneLayer> lightTest_SphereSizes = Uuid<SceneLayer>("{7c87b87f-6b65-42e1-a052-3c77f67d9640}");
 Uuid<SceneLayer> lightTest_RectSizes = Uuid<SceneLayer>("{168466a8-0e2f-4e85-84b9-cd16d6c48b42}");
 Uuid<SceneLayer> texturedSuzanne = Uuid<SceneLayer>("{37cc7890-2a38-4228-9e38-bb57726ff5ae}");
+Uuid<SceneLayer> texturedBunny = Uuid<SceneLayer>("{42ad73c8-e168-4133-b6c4-2b7247a053f0}");
+Uuid<SceneLayer> multiple_textured_objects = Uuid<SceneLayer>("{67be2020-5d46-451b-ad1e-a2d9cfe9a44c}");
 Uuid<SceneLayer> sphereAtOrigin = Uuid<SceneLayer>("{941ff512-4b9d-4540-903c-ca4fbf7ba3fc}");
 Uuid<SceneLayer> cameraLayer = Uuid<SceneLayer>("{61f7a05d-0893-4f7e-b1ae-f134c1014fc2}");
 Uuid<SceneLayer> lightLayer = Uuid<SceneLayer>("{d70f109f-564a-495d-958f-93173ac13725}");
@@ -51,6 +53,8 @@ Uuid<Scene> roughness = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 Uuid<Scene> sphereLightSizes = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab90}");
 Uuid<Scene> rectLightSizes = Uuid<Scene>("{cd03b6ef-cd02-4d34-a19a-d0cd86c5ed78}");
 Uuid<Scene> texturedSuzanne = Uuid<Scene>("{e8a07aee-d0d7-43b7-a9e2-867a824d2f48}");
+Uuid<Scene> texturedBunny = Uuid<Scene>("{7a0209b1-e6df-41e8-a75c-aa80f7c82890}");
+Uuid<Scene> multiple_textured_objects = Uuid<Scene>("{07474473-2712-4239-83f7-1fb2b35011bd}");
 Uuid<Scene> empty = Uuid<Scene>("{d5167e9c-3758-48ad-bca4-fe5333809cb4}");
 
 } // namespace scenes

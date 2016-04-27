@@ -1,5 +1,6 @@
 #include "uuids.as"
 #include "common/meshes/suzanne/uuids.as"
+#include "advanced/meshes/uuids.as"
 #include "common/textures/uuids.as"
 
 void main(ResourceIndex@ index)
@@ -17,7 +18,8 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
   importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
   
-  importSettings.meshUuids['Suzanne'] = uuids::suzanne::meshes::smooth;
+  //importSettings.meshUuids['suzanne-aabb'] = uuids::suzanne::meshes::smooth;
+  //importSettings.meshUuids['bunny-aabb'] = uuids::meshes::bunny;
   
   importSettings.cameraUuids['camera'] = uuids::cornellBox::cameras::camera;
   importSettings.cameraUuids['cornell-box-camera'] = uuids::cornellBox::cameras::defaultCamera;
@@ -74,6 +76,14 @@ void main(ResourceIndex@ index)
                           sourceFile: "cornell-box.blend",
                           groupToImport: "suzanne",
                           settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-bunny.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          groupToImport: "bunny",
+                          settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-multiple-objects.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          groupToImport: "multiple_objects",
+                          settings: importSettings);
   index.convertSceneGraph(sceneGraphFile: "sphere-at-origin.scene-graph",
                           sourceFile: "sphere-at-origin.blend",
                           groupToImport: "sphere-at-origin",
@@ -95,6 +105,10 @@ void main(ResourceIndex@ index)
                                file: "cornell-box-rect-sizes.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::texturedSuzanne,
                                file: "cornell-box-textured-suzanne.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::texturedBunny,
+                               file: "cornell-box-textured-bunny.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::multiple_textured_objects,
+                               file: "cornell-box-multiple-objects.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::sphereAtOrigin,
                                file: "sphere-at-origin.scene-layer");
                                
@@ -108,6 +122,10 @@ void main(ResourceIndex@ index)
                           file: "cornell-box-rect-lights.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::texturedSuzanne,
                           file: "cornell-box-textured-suzanne.scene");
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::texturedBunny,
+                          file: "cornell-box-textured-bunny.scene");
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::multiple_textured_objects,
+                          file: "cornell-box-multiple-objects.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::empty,
                           file: "empty.scene");
 
