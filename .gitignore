@@ -2,5 +2,6 @@
 *.blend2
 *.texture
 *.scene-graph
+*.scene-graph.asset-index
 *.mesh
 *.voxel-metadata
