@@ -3,7 +3,15 @@
 #include "advanced/meshes/uuids.as"
 #include "common/textures/uuids.as"
 
+
 void main(ResourceIndex@ index)
+{
+  registerMaterials(index);
+  registerLights(index);
+  importScene(index);
+}
+
+void importScene(ResourceIndex@ index)
 {
   SceneGraphImportSettings importSettings;
   
@@ -17,6 +25,9 @@ void main(ResourceIndex@ index)
   importSettings.materialUuids['wall'] = uuids::cornellBox::materials::wall;
   importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
   importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
+  
+  array<string> twoSidedMeshes = {"walls", "mirror"};
+  importSettings.meshesToVoxelizeTwoSided = twoSidedMeshes;
   
   importSettings.meshUuids['suzanne-aabb'] = uuids::suzanne::meshes::smooth;
   importSettings.meshUuids['bunny-aabb'] = uuids::meshes::bunny;
@@ -127,9 +138,11 @@ void main(ResourceIndex@ index)
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::multiple_textured_objects,
                           file: "cornell-box-multiple-objects.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::empty,
-                          file: "empty.scene");
+                          file: "empty.scene");                  
+}
 
-  
+void registerMaterials(ResourceIndex@ index)
+{
   PlainColorMaterial wallPlainMaterial;
   wallPlainMaterial.smoothness = 0.3;
   wallPlainMaterial.base_color = vec3(0.631, 0.065, 0.050);
@@ -160,7 +173,10 @@ void main(ResourceIndex@ index)
   mirrorPlainMaterial.smoothness = 0.6;
   index.registerMaterial(uuid: uuids::cornellBox::materials::mirrorRoughness_40,
                          material: mirrorPlainMaterial);
+}
 
+void registerLights(ResourceIndex@ index)
+{
   RectAreaLightSource rectAreaLight;
   SphereAreaLightSource sphereAreaLight;
   
