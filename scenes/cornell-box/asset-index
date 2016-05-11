@@ -26,8 +26,10 @@ void importScene(ResourceIndex@ index)
   importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
   importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
   
-  array<string> twoSidedMeshes = {"walls", "mirror"};
+  array<string> twoSidedMeshes = {"mirror"};
   importSettings.meshesToVoxelizeTwoSided = twoSidedMeshes;
+  array<string> meshesToVoxelize = {};
+  importSettings.meshesToVoxelize = meshesToVoxelize;
   
   importSettings.meshUuids['suzanne-aabb'] = uuids::suzanne::meshes::smooth;
   importSettings.meshUuids['bunny-aabb'] = uuids::meshes::bunny;
