@@ -28,8 +28,6 @@ void importScene(ResourceIndex@ index)
   
   array<string> twoSidedMeshes = {"mirror"};
   importSettings.meshesToVoxelizeTwoSided = twoSidedMeshes;
-  array<string> meshesToVoxelize = {};
-  importSettings.meshesToVoxelize = meshesToVoxelize;
   
   importSettings.meshUuids['suzanne-aabb'] = uuids::suzanne::meshes::smooth;
   importSettings.meshUuids['bunny-aabb'] = uuids::meshes::bunny;
