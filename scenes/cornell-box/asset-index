@@ -99,6 +99,10 @@ void importScene(ResourceIndex@ index)
                           sourceFile: "sphere-at-origin.blend",
                           groupToImport: "sphere-at-origin",
                           settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-merged.scene-graph",
+                          sourceFile: "cornell-box-merged.blend",
+                          groupToImport: "merged-box",
+                          settings: importSettings);
                           
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::empty,
                                file: "cornell-box-empty.scene-layer");
@@ -122,6 +126,8 @@ void importScene(ResourceIndex@ index)
                                file: "cornell-box-multiple-objects.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::sphereAtOrigin,
                                file: "sphere-at-origin.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::mergedCornellBoxLayer,
+                               file: "cornell-box-merged.scene-layer");
                                
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::defaultCubes,
                           file: "cornell-box.scene");
@@ -138,7 +144,9 @@ void importScene(ResourceIndex@ index)
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::multiple_textured_objects,
                           file: "cornell-box-multiple-objects.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::empty,
-                          file: "empty.scene");                  
+                          file: "empty.scene");      
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::mergedCornellBox,
+                          file: "cornell-box-merged.scene");              
 }
 
 void registerMaterials(ResourceIndex@ index)

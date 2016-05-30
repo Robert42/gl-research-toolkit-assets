@@ -43,11 +43,13 @@ Uuid<SceneLayer> multiple_textured_objects = Uuid<SceneLayer>("{67be2020-5d46-45
 Uuid<SceneLayer> sphereAtOrigin = Uuid<SceneLayer>("{941ff512-4b9d-4540-903c-ca4fbf7ba3fc}");
 Uuid<SceneLayer> cameraLayer = Uuid<SceneLayer>("{61f7a05d-0893-4f7e-b1ae-f134c1014fc2}");
 Uuid<SceneLayer> lightLayer = Uuid<SceneLayer>("{d70f109f-564a-495d-958f-93173ac13725}");
+Uuid<SceneLayer> mergedCornellBoxLayer = Uuid<SceneLayer>("{dc7ae333-689c-4479-9bf4-20f8e7dc5d1a}");
 
 
 } // namespace sceneLayers
 namespace scenes {
 
+Uuid<Scene> mergedCornellBox = Uuid<Scene>("{7e0e5bbe-e667-42a6-95b4-edb28576f9f6}");
 Uuid<Scene> defaultCubes = Uuid<Scene>("{158da3d3-ef79-4895-add4-f2fe22c0dbff}");
 Uuid<Scene> roughness = Uuid<Scene>("{297e2f65-220b-42d7-ae10-1b9b45a75f7c}");
 Uuid<Scene> sphereLightSizes = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab90}");
