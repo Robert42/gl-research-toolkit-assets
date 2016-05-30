@@ -26,6 +26,8 @@ void importScene(ResourceIndex@ index)
   importSettings.materialUuids['uv-grid'] = uuids::materials::uvgrid_test;
   importSettings.materialUuids['color-grid'] = uuids::materials::colorgrid_test;
   
+  importSettings.meshVoxelizeScaleFactors['merged_walls'] = 32;
+  
   array<string> twoSidedMeshes = {"mirror"};
   importSettings.meshesToVoxelizeTwoSided = twoSidedMeshes;
   
