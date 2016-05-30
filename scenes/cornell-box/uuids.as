@@ -33,6 +33,7 @@ namespace sceneLayers {
 Uuid<SceneLayer> empty = Uuid<SceneLayer>("{4f9de818-170e-4533-b4e6-cb7fedc1e6bd}");
 Uuid<SceneLayer> demoCubes = Uuid<SceneLayer>("{8ed752b6-758a-491e-8f39-f7cb12a3a154}");
 Uuid<SceneLayer> defaultLight = Uuid<SceneLayer>("{dcf17706-7103-462d-82f8-abeadaf0d4be}");
+Uuid<SceneLayer> defaultCamera = Uuid<SceneLayer>("{19945622-b371-495f-aaf6-09afb9e5c5d5}");
 Uuid<SceneLayer> roughnessTestLights = Uuid<SceneLayer>("{ef1b2d04-c51a-4dc5-b36a-58a6ee59a21f}");
 Uuid<SceneLayer> roughnessTestMirrors = Uuid<SceneLayer>("{87e6d354-8718-4945-839c-31edb6362878}");
 Uuid<SceneLayer> lightTest_SphereSizes = Uuid<SceneLayer>("{7c87b87f-6b65-42e1-a052-3c77f67d9640}");

@@ -3,6 +3,7 @@
 void main(Scene@ scene)
 {
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::empty);
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultCamera);
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::lightTest_RectSizes);
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::roughnessTestMirrors);
   scene.addSceneLayer_debugCamera();

@@ -3,6 +3,7 @@
 void main(Scene@ scene)
 {
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::empty);
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultCamera);
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::demoCubes);
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultLight);
   scene.addSceneLayer_debugCamera();

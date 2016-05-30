@@ -66,6 +66,10 @@ void importScene(ResourceIndex@ index)
                           sourceFile: "cornell-box.blend",
                           groupToImport: "default-light",
                           settings: importSettings);
+  index.convertSceneGraph(sceneGraphFile: "cornell-box-default-camera.scene-graph",
+                          sourceFile: "cornell-box.blend",
+                          groupToImport: "default-camera",
+                          settings: importSettings);
 
   index.convertSceneGraph(sceneGraphFile: "cornell-box-roughness-lights.scene-graph",
                           sourceFile: "cornell-box-roughness.blend",
@@ -110,6 +114,8 @@ void importScene(ResourceIndex@ index)
                                file: "cornell-box-demo-cubes.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::defaultLight,
                                file: "cornell-box-default-light.scene-layer");
+  index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::defaultCamera,
+                               file: "cornell-box-default-camera.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::roughnessTestLights,
                                file: "cornell-box-roughness-lights.scene-layer");
   index.registerSceneLayerFile(uuid: uuids::cornellBox::sceneLayers::roughnessTestMirrors,
