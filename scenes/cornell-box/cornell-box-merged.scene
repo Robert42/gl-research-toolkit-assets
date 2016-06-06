@@ -3,7 +3,7 @@
 void main(Scene@ scene)
 {
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::mergedCornellBoxLayer);
-  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultLight);
+  scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultSphereLight);
   scene.loadSceneLayer(uuids::cornellBox::sceneLayers::defaultCamera);
   scene.addSceneLayer_debugCamera();
   

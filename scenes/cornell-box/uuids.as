@@ -33,6 +33,7 @@ namespace sceneLayers {
 Uuid<SceneLayer> empty = Uuid<SceneLayer>("{4f9de818-170e-4533-b4e6-cb7fedc1e6bd}");
 Uuid<SceneLayer> demoCubes = Uuid<SceneLayer>("{8ed752b6-758a-491e-8f39-f7cb12a3a154}");
 Uuid<SceneLayer> defaultLight = Uuid<SceneLayer>("{dcf17706-7103-462d-82f8-abeadaf0d4be}");
+Uuid<SceneLayer> defaultSphereLight = Uuid<SceneLayer>("{afe7c6dd-ceed-4e1f-b5da-8d193bf83551}");
 Uuid<SceneLayer> defaultCamera = Uuid<SceneLayer>("{19945622-b371-495f-aaf6-09afb9e5c5d5}");
 Uuid<SceneLayer> roughnessTestLights = Uuid<SceneLayer>("{ef1b2d04-c51a-4dc5-b36a-58a6ee59a21f}");
 Uuid<SceneLayer> roughnessTestMirrors = Uuid<SceneLayer>("{87e6d354-8718-4945-839c-31edb6362878}");
@@ -45,7 +46,6 @@ Uuid<SceneLayer> sphereAtOrigin = Uuid<SceneLayer>("{941ff512-4b9d-4540-903c-ca4
 Uuid<SceneLayer> cameraLayer = Uuid<SceneLayer>("{61f7a05d-0893-4f7e-b1ae-f134c1014fc2}");
 Uuid<SceneLayer> lightLayer = Uuid<SceneLayer>("{d70f109f-564a-495d-958f-93173ac13725}");
 Uuid<SceneLayer> mergedCornellBoxLayer = Uuid<SceneLayer>("{dc7ae333-689c-4479-9bf4-20f8e7dc5d1a}");
-
 
 } // namespace sceneLayers
 namespace scenes {
