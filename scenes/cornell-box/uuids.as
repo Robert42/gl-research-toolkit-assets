@@ -57,6 +57,7 @@ Uuid<Scene> sphereLightSizes = Uuid<Scene>("{9d4123c4-c6c6-435e-ba74-04527005ab9
 Uuid<Scene> rectLightSizes = Uuid<Scene>("{cd03b6ef-cd02-4d34-a19a-d0cd86c5ed78}");
 Uuid<Scene> texturedSuzanne = Uuid<Scene>("{e8a07aee-d0d7-43b7-a9e2-867a824d2f48}");
 Uuid<Scene> texturedBunny = Uuid<Scene>("{7a0209b1-e6df-41e8-a75c-aa80f7c82890}");
+Uuid<Scene> onlyTexturedBunny = Uuid<Scene>("{9e54f700-73bf-4088-be86-952c5eee7c97}");
 Uuid<Scene> multiple_textured_objects = Uuid<Scene>("{07474473-2712-4239-83f7-1fb2b35011bd}");
 Uuid<Scene> empty = Uuid<Scene>("{d5167e9c-3758-48ad-bca4-fe5333809cb4}");
 

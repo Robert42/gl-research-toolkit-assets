@@ -155,6 +155,8 @@ void importScene(ResourceIndex@ index)
                           file: "cornell-box-textured-suzanne.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::texturedBunny,
                           file: "cornell-box-textured-bunny.scene");
+  index.registerSceneFile(uuid: uuids::cornellBox::scenes::onlyTexturedBunny,
+                          file: "bunny.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::multiple_textured_objects,
                           file: "cornell-box-multiple-objects.scene");
   index.registerSceneFile(uuid: uuids::cornellBox::scenes::empty,
