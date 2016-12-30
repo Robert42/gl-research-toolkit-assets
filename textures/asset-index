@@ -18,6 +18,7 @@ void main(ResourceIndex@ index)
   samplerNearest.mipFilter = TextureFilter::LINEAR;
 
   TextureImportSettings proceduralImportSettings;
+  float nan = proceduralImportSettings.force_value.x;
   proceduralImportSettings.format = TextureFormat::RGB;
   proceduralImportSettings.type = TextureType::INT8;
   proceduralImportSettings.force_value = vec4(0, 0, 1, 0);
@@ -41,7 +42,7 @@ void main(ResourceIndex@ index)
   
   proceduralImportSettings.format = TextureFormat::RG;
   proceduralImportSettings.type = TextureType::FLOAT16;
-  proceduralImportSettings.force_value = vec4(NAN); // disable any effect of force_value
+  proceduralImportSettings.force_value = vec4(nan); // disable any effect of force_value
   proceduralImportSettings.calculate_dfg_lut = true;
   index.convertTexture(textureFile: "dfg_lut.texture", sourceFile: "dummy_256.png", settings: proceduralImportSettings);
 
