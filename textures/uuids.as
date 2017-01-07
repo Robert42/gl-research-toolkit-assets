@@ -11,6 +11,7 @@ Uuid<Texture> white("{fa46351a-eed3-4b6c-91f6-a8a62a6c6b02}");
 Uuid<Texture> grey("{adb8470e-57b9-4f94-8ba8-c7a2d93fccf9}");
 Uuid<Texture> fruit_plate_256x256("{3cc3ac32-b78c-4025-8905-6ea577fa4c13}");
 
+Uuid<Texture> dfg("{dd867b52-a63d-40c9-8e00-07348d6577bf}");
 
 } // namespace textures
 namespace materials {

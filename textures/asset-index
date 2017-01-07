@@ -16,6 +16,11 @@ void main(ResourceIndex@ index)
   samplerNearest.magFilter = TextureFilter::NEAREST;
   samplerNearest.minFilter = TextureFilter::LINEAR;
   samplerNearest.mipFilter = TextureFilter::LINEAR;
+  
+  TextureSampler samplerInterpolatedClamped;
+  samplerInterpolatedClamped.borderHandlingU = TextureBorder::CLAMP;
+  samplerInterpolatedClamped.borderHandlingV = TextureBorder::CLAMP;
+  samplerInterpolatedClamped.borderHandlingW = TextureBorder::CLAMP;
 
   TextureImportSettings proceduralImportSettings;
   float nan = proceduralImportSettings.force_value.x;
@@ -40,11 +45,12 @@ void main(ResourceIndex@ index)
   proceduralImportSettings.force_value = vec4(0.5, 0.5, 0.5, 1);
   index.convertTexture(textureFile: "grey.texture", sourceFile: "dummy.png", settings: proceduralImportSettings);
   
-  proceduralImportSettings.format = TextureFormat::RG;
+  proceduralImportSettings.format = TextureFormat::RGB;
   proceduralImportSettings.type = TextureType::FLOAT16;
   proceduralImportSettings.force_value = vec4(nan); // disable any effect of force_value
   proceduralImportSettings.calculate_dfg_lut = true;
   index.convertTexture(textureFile: "dfg_lut.texture", sourceFile: "dummy_256.png", settings: proceduralImportSettings);
+  index.registerTextureFile(uuid: uuids::textures::dfg, file: "dfg_lut.texture", defaultSampler: samplerInterpolatedClamped);
 
   index.convertTexture(textureFile: "fruit-plate-256x256.texture", sourceFile: "fruit-plate-256x256.png", settings: importLosslessRgb);
   
